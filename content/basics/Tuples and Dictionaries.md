@@ -1,9 +1,9 @@
 ---
-title: Rename
+title: Tuples And Dictionaries
 date: 2025-07-21
 author: Your Name
-cell_count: 55
-score: 55
+cell_count: 106
+score: 105
 ---
 
 ```python
@@ -722,9 +722,734 @@ print(d)
 
 
 ```python
+d = {str(x): x**2 for x in range(9)}
+print(d)
+```
+
+    {'0': 0, '1': 1, '2': 4, '3': 9, '4': 16, '5': 25, '6': 36, '7': 49, '8': 64}
+    
+
+
+```python
+d = {'name': 'Alice', 'age': 25}
+print(d['name'])
+```
+
+    Alice
+    
+
+
+```python
+d = {'name': 'Alice', 'age': 25}
+print(d['age'])
+```
+
+    25
+    
+
+
+```python
+d = {'name': 'Alice', 'age': 25}
+print(d['name'])
+```
+
+    Alice
+    
+
+
+```python
+d = {'name': 'Alice', 'age': 25}
+print(d['name'])
+```
+
+    Alice
+    
+
+
+```python
+d = {'a': 1, 'b': 2}
+d['c'] = 3
+print(d)
+```
+
+    {'a': 1, 'b': 2, 'c': 3}
+    
+
+
+```python
+d = {'a': 1, 'b': 2}
+d['c'] = 3
+print(d)
+```
+
+    {'a': 1, 'b': 2, 'c': 3}
+    
+
+
+```python
+
+d = {'a': 1, 'b': 2}
+d['c'] = 3
+print(d)
+
+
+
+```
+
+    {'a': 1, 'b': 2, 'c': 3}
+    
+
+
+```python
+d = {'a': 1, 'b': 2}
+d['c'] = 3
+print(d)
+```
+
+    {'a': 1, 'b': 2, 'c': 3}
+    
+
+
+```python
+d = {'x': 10, 'y': 20}
+print(list(d.keys()))
+```
+
+    ['x', 'y']
+    
+
+
+```python
+d = {'x': 10, 'y': 20}
+print(list(d.keys()))
+```
+
+    ['x', 'y']
+    
+
+
+```python
+d = {'x': 10, 'y': 20}
+print(list(d.items()))
+```
+
+    [('x', 10), ('y', 20)]
+    
+
+
+```python
+d = {'x': 10, 'y': 20}
+print(list(d.items()))
+```
+
+    [('x', 10), ('y', 20)]
+    
+
+
+```python
+d = {'x': 10, 'y': 20}
+print(list(d.items()))
+```
+
+    [('x', 10), ('y', 20)]
+    
+
+
+```python
+d1 = {'a': 1}
+d2 = {'b': 2}
+d1.update(d2)
+print(d1)
+```
+
+    {'a': 1, 'b': 2}
+    
+
+
+```python
+students = [
+    ("Ravi", 90),
+    ("Priya", 85),
+    ("Aman", 78)
+]
+
+for name, marks in students:
+    print(f"{name} scored {marks}")
+
+```
+
+    Ravi scored 90
+    Priya scored 85
+    Aman scored 78
+    
+
+
+```python
+student = {
+    "name": "Kiran",
+    "dob": (2002, 5, 23),  # (year, month, day)
+    "marks": (89, 92, 85)
+}
+print(student["dob"])
+
+```
+
+    (2002, 5, 23)
+    
+
+
+```python
+coordinates = [
+    (0, 0),
+    (1, 2),
+    (3, 4),
+    (5, 6)
+]
+
+for x, y in coordinates:
+    print(f"x={x}, y={y}")
+
+```
+
+    x=0, y=0
+    x=1, y=2
+    x=3, y=4
+    x=5, y=6
+    
+
+
+```python
+colors = ["red", "green", "blue"]
+
+for index, color in enumerate(colors):
+    print(f"Index: {index}, Color: {color}")
+
+```
+
+    Index: 0, Color: red
+    Index: 1, Color: green
+    Index: 2, Color: blue
+    
+
+
+```python
+def min_max(numbers):
+    return (min(numbers), max(numbers))
+
+result = min_max([10, 5, 2, 99])
+print(f"Min: {result[0]}, Max: {result[1]}")
+
+```
+
+    Min: 2, Max: 99
+    
+
+
+```python
+person_info = (
+    ("Name", "Ravi"),
+    ("Age", 24),
+    ("Gender", "Male")
+)
+
+for label, value in person_info:
+    print(f"{label}: {value}")
+
+```
+
+    Name: Ravi
+    Age: 24
+    Gender: Male
+    
+
+
+```python
+employee = ("Raj", "Developer", 50000)
+
+name, role, salary = employee
+print(f"{name} works as a {role} earning ₹{salary}")
+
+```
+
+    Raj works as a Developer earning ₹50000
+    
+
+
+```python
+students = [
+    ("Ravi", 90),
+    ("Priya", 85),
+    ("Aman", 78)
+]
+
+# Sort by marks
+sorted_students = sorted(students, key=lambda x: x[1], reverse=True)
+print(sorted_students)
+
+```
+
+    [('Ravi', 90), ('Priya', 85), ('Aman', 78)]
+    
+
+
+```python
+location_map = {
+    (12.9716, 77.5946): "Bangalore",
+    (28.6139, 77.2090): "Delhi"
+}
+print(location_map[(12.9716, 77.5946)])
+
+
+```
+
+    Bangalore
+    
+
+
+```python
+contacts = (
+    ("Ravi", ("ravi@example.com", "9876543210")),
+    ("Priya", ("priya@example.com", "8765432109"))
+)
+
+for name, (email, phone) in contacts:
+    print(f"{name} → Email: {email}, Phone: {phone}")
+
+```
+
+    Ravi → Email: ravi@example.com, Phone: 9876543210
+    Priya → Email: priya@example.com, Phone: 8765432109
+    
+
+
+```python
+names = ["Amit", "Sita", "John"]
+scores = [88, 92, 79]
+
+zipped = list(zip(names, scores))
+print(zipped)  # [('Amit', 88), ('Sita', 92), ('John', 79)]
+
+```
+
+    [('Amit', 88), ('Sita', 92), ('John', 79)]
+    
+
+
+```python
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list)
+print(my_tuple)  # (1, 2, 3)
+
+back_to_list = list(my_tuple)
+print(back_to_list)  # [1, 2, 3]
+
+```
+
+    (1, 2, 3)
+    [1, 2, 3]
+    
+
+
+```python
+def get_student():
+    return ("Kavya", 20, "BSc")
+
+name, age, course = get_student()
+print(f"{name} is {age} years old and studies {course}")
+
+```
+
+    Kavya is 20 years old and studies BSc
+    
+
+
+```python
+a = 5
+b = 10
+
+a, b = b, a  # Swap
+print(f"a = {a}, b = {b}")
+
+```
+
+    a = 10, b = 5
+    
+
+
+```python
+data = (
+    {"name": "Ravi", "score": 80},
+    {"name": "Anu", "score": 95},
+    {"name": "Kiran", "score": 70}
+)
+
+for entry in data:
+    print(entry["name"], entry["score"])
+
+```
+
+    Ravi 80
+    Anu 95
+    Kiran 70
+    
+
+
+```python
+import pandas as pd
+
+data = [
+    ("Kiran", 80, 90),
+    ("Ravi", 70, 85),
+    ("Anu", 95, 100)
+]
+
+df = pd.DataFrame(data, columns=["Name", "Maths", "Science"])
+df
+
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Maths</th>
+      <th>Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Kiran</td>
+      <td>80</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ravi</td>
+      <td>70</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Anu</td>
+      <td>95</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+def sum_all(*numbers):
+    return sum(numbers)
+
+print(sum_all(1, 2, 3))     # 6
+print(sum_all(10, 20, 30))  # 60
+
+```
+
+    6
+    60
+    
+
+
+```python
+items = ["apple", "banana", "grape"]
+
+for idx, val in enumerate(items):
+    print(f"{idx}: {val}")
+
+```
+
+    0: apple
+    1: banana
+    2: grape
+    
+
+
+```python
+# Use tuple for fixed data (e.g., months)
+months = ("Jan", "Feb", "Mar", "Apr")
+# months[0] = "January"  ❌ Will throw error
+print(months)
+
+```
+
+    ('Jan', 'Feb', 'Mar', 'Apr')
+    
+
+
+```python
+rows = [
+    (1, "Kiran", "B.Tech"),
+    (2, "Sita", "B.Sc"),
+    (3, "Ravi", "MCA")
+]
+
+for roll, name, course in rows:
+    print(f"{roll} - {name} - {course}")
+
+```
+
+    1 - Kiran - B.Tech
+    2 - Sita - B.Sc
+    3 - Ravi - MCA
+    
+
+
+```python
+config = ("localhost", 8080)
+host, port = config
+print(f"Server running on {host}:{port}")
+
+```
+
+    Server running on localhost:8080
+    
+
+
+```python
+marks = [
+    ("Ajay", [78, 85, 90]),
+    ("Kavya", [88, 92, 95]),
+    ("Rohit", [65, 70, 72])
+]
+
+for name, scores in marks:
+    print(f"{name} → Avg = {sum(scores)/len(scores):.2f}")
+
+```
+
+    Ajay → Avg = 84.33
+    Kavya → Avg = 91.67
+    Rohit → Avg = 69.00
+    
+
+
+```python
+coordinates = {
+    (0, 0),
+    (1, 2),
+    (3, 4)
+}
+
+print((1, 2) in coordinates)  # True
+
+```
+
+    True
+    
+
+
+```python
+matrix = (
+    (1, 2, 3),
+    (4, 5, 6),
+    (7, 8, 9)
+)
+
+for row in matrix:
+    print(row)
+
+```
+
+    (1, 2, 3)
+    (4, 5, 6)
+    (7, 8, 9)
+    
+
+
+```python
+scores = [
+    ("Alice", 88),
+    ("Bob", 75),
+    ("Charlie", 95)
+]
+
+sorted_scores = sorted(scores, key=lambda x: x[1])
+print(sorted_scores)
+
+```
+
+    [('Bob', 75), ('Alice', 88), ('Charlie', 95)]
+    
+
+
+```python
+student = {"name": "Meena", "age": 21, "course": "B.Tech"}
+
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+```
+
+    name: Meena
+    age: 21
+    course: B.Tech
+    
+
+
+```python
+from itertools import product
+
+colors = ["Red", "Green"]
+sizes = ["S", "M"]
+
+combos = list(product(colors, sizes))
+print(combos)
+# [('Red', 'S'), ('Red', 'M'), ('Green', 'S'), ('Green', 'M')]
+
+```
+
+    [('Red', 'S'), ('Red', 'M'), ('Green', 'S'), ('Green', 'M')]
+    
+
+
+```python
+nested = ((1, 2), (3, 4), (5, 6))
+flat = [item for sub in nested for item in sub]
+print(flat)  # [1, 2, 3, 4, 5, 6]
+
+```
+
+    [1, 2, 3, 4, 5, 6]
+    
+
+
+```python
+def show_data(info):
+    for item in info:
+        print(item)
+
+show_data(("Python", "Tuples", "Immutable"))
+
+```
+
+    Python
+    Tuples
+    Immutable
+    
+
+
+```python
+votes = [
+    ("Alice", "Yes"),
+    ("Bob", "No"),
+    ("Alice", "Yes"),
+    ("Alice", "No")
+]
+
+from collections import Counter
+vote_counter = Counter(votes)
+print(vote_counter)
+
+```
+
+    Counter({('Alice', 'Yes'): 2, ('Bob', 'No'): 1, ('Alice', 'No'): 1})
+    
+
+
+```python
+from collections import namedtuple
+
+Student = namedtuple("Student", "name age grade")
+s1 = Student("Amit", 20, "A")
+
+print(s1.name, s1.age, s1.grade)
+
+
+```
+
+    Amit 20 A
+    
+
+
+```python
+person = ("Ram", 35, "Teacher")
+print(f"Name: {person[0]}, Age: {person[1]}, Occupation: {person[2]}")
+
+```
+
+    Name: Ram, Age: 35, Occupation: Teacher
+    
+
+
+```python
+names = ("Ravi", "Seema", "Arun")
+ages = (25, 30, 22)
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old")
+
+```
+
+    Ravi is 25 years old
+    Seema is 30 years old
+    Arun is 22 years old
+    
+
+
+```python
+mixed = ("Python", [1, 2, 3])
+mixed[1].append(4)
+print(mixed)  # ('Python', [1, 2, 3, 4])
+
+```
+
+    ('Python', [1, 2, 3, 4])
+    
+
+
+```python
+a = (1, 2, 3)
+b = (1, 2, 4)
+print(a < b)  # True (compares element-wise)
+
+```
+
+    True
+    
+
+
+```python
+def analyze_data(data):
+    average = sum(data) / len(data)
+    return (min(data), max(data), average)
+
+result = analyze_data([10, 20, 30, 40])
+print(f"Min: {result[0]}, Max: {result[1]}, Avg: {result[2]}")
+
+```
+
+    Min: 10, Max: 40, Avg: 25.0
+    
+
+
+```python
 
 ```
 
 
 ---
-**Score: 55**
+**Score: 105**

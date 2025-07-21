@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Rename</title>
+    <title>Tuples And Dictionaries</title>
 
     <link rel="stylesheet" href="https://sahilgumpu.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://sahilgumpu.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,8 +44,8 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://sahilgumpu.github.io/pynotes/rename.html" rel="bookmark"
-        title="Permalink to Rename">Rename</a></h3>
+        <h3 class="article-title"><a href="https://sahilgumpu.github.io/pynotes/tuples-and-dictionaries.html" rel="bookmark"
+        title="Permalink to Tuples And Dictionaries">Tuples And Dictionaries</a></h3>
     </header>
 
 <h6 class="subheader" title="2025-07-21T00:00:00-04:00">Mon 21 July 2025
@@ -634,11 +634,587 @@ d
 <div class="highlight"><pre><span></span><code>{&#39;0&#39;: 0, &#39;1&#39;: 1, &#39;2&#39;: 4, &#39;3&#39;: 9, &#39;4&#39;: 16, &#39;5&#39;: 25, &#39;6&#39;: 36}
 </code></pre></div>
 
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;0&#39;: 0, &#39;1&#39;: 1, &#39;2&#39;: 4, &#39;3&#39;: 9, &#39;4&#39;: 16, &#39;5&#39;: 25, &#39;6&#39;: 36, &#39;7&#39;: 49, &#39;8&#39;: 64}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">25</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;x&#39;, &#39;y&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;x&#39;, &#39;y&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;x&#39;, 10), (&#39;y&#39;, 20)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;x&#39;, 10), (&#39;y&#39;, 20)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;x&#39;, 10), (&#39;y&#39;, 20)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">d1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">d1</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Priya&quot;</span><span class="p">,</span> <span class="mi">85</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Aman&quot;</span><span class="p">,</span> <span class="mi">78</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">marks</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> scored </span><span class="si">{</span><span class="n">marks</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Ravi scored 90
+Priya scored 85
+Aman scored 78
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Kiran&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dob&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2002</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">23</span><span class="p">),</span>  <span class="c1"># (year, month, day)</span>
+    <span class="s2">&quot;marks&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">89</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s2">&quot;dob&quot;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(2002, 5, 23)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coordinates</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">coordinates</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x=</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, y=</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>x=0, y=0
+x=1, y=2
+x=3, y=4
+x=5, y=6
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index: </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">, Color: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="gh">Index: 0, Color: red</span>
+<span class="gh">Index: 1, Color: green</span>
+<span class="gh">Index: 2, Color: blue</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">min_max</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">min_max</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Min: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Max: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Min</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="o">,</span><span class="w"> </span><span class="n">Max</span><span class="o">:</span><span class="w"> </span><span class="mi">99</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">person_info</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Ravi&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="mi">24</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Gender&quot;</span><span class="p">,</span> <span class="s2">&quot;Male&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">person_info</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Ravi</span>
+<span class="n">Age</span><span class="o">:</span><span class="w"> </span><span class="mi">24</span>
+<span class="n">Gender</span><span class="o">:</span><span class="w"> </span><span class="n">Male</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">employee</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Raj&quot;</span><span class="p">,</span> <span class="s2">&quot;Developer&quot;</span><span class="p">,</span> <span class="mi">50000</span><span class="p">)</span>
+
+<span class="n">name</span><span class="p">,</span> <span class="n">role</span><span class="p">,</span> <span class="n">salary</span> <span class="o">=</span> <span class="n">employee</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> works as a </span><span class="si">{</span><span class="n">role</span><span class="si">}</span><span class="s2"> earning ₹</span><span class="si">{</span><span class="n">salary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Raj works as a Developer earning ₹50000
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Priya&quot;</span><span class="p">,</span> <span class="mi">85</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Aman&quot;</span><span class="p">,</span> <span class="mi">78</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Sort by marks</span>
+<span class="n">sorted_students</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_students</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;Ravi&#39;, 90), (&#39;Priya&#39;, 85), (&#39;Aman&#39;, 78)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">location_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="mf">12.9716</span><span class="p">,</span> <span class="mf">77.5946</span><span class="p">):</span> <span class="s2">&quot;Bangalore&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mf">28.6139</span><span class="p">,</span> <span class="mf">77.2090</span><span class="p">):</span> <span class="s2">&quot;Delhi&quot;</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">location_map</span><span class="p">[(</span><span class="mf">12.9716</span><span class="p">,</span> <span class="mf">77.5946</span><span class="p">)])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Bangalore
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">contacts</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;ravi@example.com&quot;</span><span class="p">,</span> <span class="s2">&quot;9876543210&quot;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">&quot;Priya&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;priya@example.com&quot;</span><span class="p">,</span> <span class="s2">&quot;8765432109&quot;</span><span class="p">))</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span> <span class="ow">in</span> <span class="n">contacts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> → Email: </span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">, Phone: </span><span class="si">{</span><span class="n">phone</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Ravi</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="n">ravi</span><span class="nv">@example</span><span class="p">.</span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="nl">Phone</span><span class="p">:</span><span class="w"> </span><span class="mi">9876543210</span>
+<span class="n">Priya</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="n">priya</span><span class="nv">@example</span><span class="p">.</span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="nl">Phone</span><span class="p">:</span><span class="w"> </span><span class="mi">8765432109</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Amit&quot;</span><span class="p">,</span> <span class="s2">&quot;Sita&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">]</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">79</span><span class="p">]</span>
+
+<span class="n">zipped</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">scores</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zipped</span><span class="p">)</span>  <span class="c1"># [(&#39;Amit&#39;, 88), (&#39;Sita&#39;, 92), (&#39;John&#39;, 79)]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;Amit&#39;, 88), (&#39;Sita&#39;, 92), (&#39;John&#39;, 79)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>  <span class="c1"># (1, 2, 3)</span>
+
+<span class="n">back_to_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">back_to_list</span><span class="p">)</span>  <span class="c1"># [1, 2, 3]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(1, 2, 3)
+[1, 2, 3]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_student</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;Kavya&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;BSc&quot;</span><span class="p">)</span>
+
+<span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">course</span> <span class="o">=</span> <span class="n">get_student</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old and studies </span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Kavya is 20 years old and studies BSc
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>  <span class="c1"># Swap</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">, b = </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>a = 10, b = 5
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Anu&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mi">95</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Kiran&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;score&quot;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Ravi 80
+Anu 95
+Kiran 70
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Kiran&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Anu&quot;</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Maths&quot;</span><span class="p">,</span> <span class="s2">&quot;Science&quot;</span><span class="p">])</span>
+<span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Maths</th>
+      <th>Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Kiran</td>
+      <td>80</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ravi</td>
+      <td>70</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Anu</td>
+      <td>95</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sum_all</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_all</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>     <span class="c1"># 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_all</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>  <span class="c1"># 60</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">6</span>
+<span class="mf">60</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;grape&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">apple</span>
+<span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="n">banana</span>
+<span class="mi">2</span><span class="o">:</span><span class="w"> </span><span class="n">grape</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Use tuple for fixed data (e.g., months)</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="s2">&quot;Mar&quot;</span><span class="p">,</span> <span class="s2">&quot;Apr&quot;</span><span class="p">)</span>
+<span class="c1"># months[0] = &quot;January&quot;  ❌ Will throw error</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">months</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(&#39;Jan&#39;, &#39;Feb&#39;, &#39;Mar&#39;, &#39;Apr&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">rows</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Kiran&quot;</span><span class="p">,</span> <span class="s2">&quot;B.Tech&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Sita&quot;</span><span class="p">,</span> <span class="s2">&quot;B.Sc&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="s2">&quot;MCA&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">roll</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">roll</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Kiran</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">B</span><span class="mf">.</span><span class="n">Tech</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Sita</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">B</span><span class="mf">.</span><span class="n">Sc</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Ravi</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">MCA</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">config</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+<span class="n">host</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="n">config</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Server running on </span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Server running on localhost:8080
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Ajay&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">78</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">]),</span>
+    <span class="p">(</span><span class="s2">&quot;Kavya&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">95</span><span class="p">]),</span>
+    <span class="p">(</span><span class="s2">&quot;Rohit&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">72</span><span class="p">])</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">marks</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> → Avg = </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Ajay → Avg = 84.33
+Kavya → Avg = 91.67
+Rohit → Avg = 69.00
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coordinates</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">coordinates</span><span class="p">)</span>  <span class="c1"># True</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">matrix</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(1, 2, 3)
+(4, 5, 6)
+(7, 8, 9)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">88</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="mi">95</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">sorted_scores</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_scores</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;Bob&#39;, 75), (&#39;Alice&#39;, 88), (&#39;Charlie&#39;, 95)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meena&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;course&quot;</span><span class="p">:</span> <span class="s2">&quot;B.Tech&quot;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">student</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="n">Meena</span>
+<span class="n">age</span><span class="o">:</span><span class="w"> </span><span class="mi">21</span>
+<span class="n">course</span><span class="o">:</span><span class="w"> </span><span class="n">B</span><span class="o">.</span><span class="na">Tech</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">product</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">]</span>
+
+<span class="n">combos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="n">colors</span><span class="p">,</span> <span class="n">sizes</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combos</span><span class="p">)</span>
+<span class="c1"># [(&#39;Red&#39;, &#39;S&#39;), (&#39;Red&#39;, &#39;M&#39;), (&#39;Green&#39;, &#39;S&#39;), (&#39;Green&#39;, &#39;M&#39;)]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;Red&#39;, &#39;S&#39;), (&#39;Red&#39;, &#39;M&#39;), (&#39;Green&#39;, &#39;S&#39;), (&#39;Green&#39;, &#39;M&#39;)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">nested</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">flat</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">nested</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sub</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flat</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1, 2, 3, 4, 5, 6]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">show_data</span><span class="p">(</span><span class="n">info</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="n">show_data</span><span class="p">((</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuples&quot;</span><span class="p">,</span> <span class="s2">&quot;Immutable&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Python
+Tuples
+Immutable
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">votes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">vote_counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vote_counter</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Counter({(&#39;Alice&#39;, &#39;Yes&#39;): 2, (&#39;Bob&#39;, &#39;No&#39;): 1, (&#39;Alice&#39;, &#39;No&#39;): 1})
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="n">Student</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;Student&quot;</span><span class="p">,</span> <span class="s2">&quot;name age grade&quot;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Amit&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">s1</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">s1</span><span class="o">.</span><span class="n">grade</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Amit 20 A
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Ram&quot;</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;Teacher&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">person</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Age: </span><span class="si">{</span><span class="n">person</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">, Occupation: </span><span class="si">{</span><span class="n">person</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Ram</span><span class="o">,</span><span class="w"> </span><span class="n">Age</span><span class="o">:</span><span class="w"> </span><span class="mi">35</span><span class="o">,</span><span class="w"> </span><span class="n">Occupation</span><span class="o">:</span><span class="w"> </span><span class="n">Teacher</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">names</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="s2">&quot;Seema&quot;</span><span class="p">,</span> <span class="s2">&quot;Arun&quot;</span><span class="p">)</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Ravi is 25 years old
+Seema is 30 years old
+Arun is 22 years old
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">mixed</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">mixed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mixed</span><span class="p">)</span>  <span class="c1"># (&#39;Python&#39;, [1, 2, 3, 4])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(&#39;Python&#39;, [1, 2, 3, 4])
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># True (compares element-wise)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">analyze_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">average</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">analyze_data</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Min: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Max: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">, Avg: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Min</span><span class="o">:</span><span class="w"> </span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">Max</span><span class="o">:</span><span class="w"> </span><span class="mi">40</span><span class="o">,</span><span class="w"> </span><span class="n">Avg</span><span class="o">:</span><span class="w"> </span><span class="mf">25.0</span>
+</code></pre></div>
+
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 55</strong></p>
+<p><strong>Score: 105</strong></p>
 <p class="subheader">Category: <a href="https://sahilgumpu.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
