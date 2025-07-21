@@ -2,8 +2,8 @@
 title: Tuples And Dictionaries
 date: 2025-07-21
 author: Your Name
-cell_count: 106
-score: 105
+cell_count: 112
+score: 110
 ---
 
 ```python
@@ -1447,9 +1447,65 @@ print(f"Min: {result[0]}, Max: {result[1]}, Avg: {result[2]}")
 
 
 ```python
+d = {'a': {'x': 10, 'y': 20}, 'b': 2}
+print(d['a']['y'])
+```
+
+    20
+    
+
+
+```python
+d = {'a': {'x': 10, 'y': 20}, 'b': 2}
+print(d['a']['x'])
+```
+
+    10
+    
+
+
+```python
+d = {'apple': 3, 'banana': 2}
+print(sum(d.values()))
+```
+
+    5
+    
+
+
+```python
+d = {'apple': 3, 'banana': 2}
+print(sum(d.values()))
+```
+
+    5
+    
+
+
+```python
+d = {'apple': 3, 'banana': 2}
+print(sum(d.values()))
+```
+
+    5
+    
+
+
+```python
+d1 = {'a': 1}
+d2 = {'b': 2}
+d1.update(d2)
+print(d1)
+```
+
+    {'a': 1, 'b': 2}
+    
+
+
+```python
 
 ```
 
 
 ---
-**Score: 105**
+**Score: 110**

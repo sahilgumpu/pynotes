@@ -2592,6 +2592,286 @@ to see the tooltip.</p>
 <p><button onclick="alert('You clicked the button!')" style="padding:10px; background-color:orange; color:white; border:none;">
   Show Alert
 </button></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">bgmi_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;!DOCTYPE html&gt;</span>
+<span class="s2">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s2">  &lt;title&gt;Welcome to BGMI&lt;/title&gt;</span>
+<span class="s2">  &lt;style&gt;</span>
+<span class="s2">    body {</span>
+<span class="s2">      background-color: #000;</span>
+<span class="s2">      color: #fff;</span>
+<span class="s2">      font-family: Arial, sans-serif;</span>
+<span class="s2">      margin: 0;</span>
+<span class="s2">      padding: 0;</span>
+<span class="s2">      display: flex;</span>
+<span class="s2">      justify-content: center;</span>
+<span class="s2">      align-items: center;</span>
+<span class="s2">      height: 100vh;</span>
+<span class="s2">      text-align: center;</span>
+<span class="s2">    }</span>
+<span class="s2">    .welcome-box {</span>
+<span class="s2">      max-width: 600px;</span>
+<span class="s2">      padding: 30px;</span>
+<span class="s2">      background-color: #111;</span>
+<span class="s2">      border-radius: 10px;</span>
+<span class="s2">      box-shadow: 0 0 10px #333;</span>
+<span class="s2">    }</span>
+<span class="s2">    h1 {</span>
+<span class="s2">      color: #28a745;</span>
+<span class="s2">    }</span>
+<span class="s2">    ul {</span>
+<span class="s2">      text-align: left;</span>
+<span class="s2">      margin-top: 20px;</span>
+<span class="s2">    }</span>
+<span class="s2">    li {</span>
+<span class="s2">      margin-bottom: 10px;</span>
+<span class="s2">    }</span>
+<span class="s2">    .start-game-btn {</span>
+<span class="s2">      margin-top: 30px;</span>
+<span class="s2">      padding: 10px 20px;</span>
+<span class="s2">      background-color: #28a745;</span>
+<span class="s2">      border: none;</span>
+<span class="s2">      color: white;</span>
+<span class="s2">      border-radius: 5px;</span>
+<span class="s2">      font-size: 16px;</span>
+<span class="s2">      cursor: pointer;</span>
+<span class="s2">    }</span>
+<span class="s2">    .start-game-btn:hover {</span>
+<span class="s2">      background-color: #218838;</span>
+<span class="s2">    }</span>
+<span class="s2">  &lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+
+<span class="s2">  &lt;div class=&quot;welcome-box&quot;&gt;</span>
+<span class="s2">    &lt;h1&gt;Welcome to BGMI!&lt;/h1&gt;</span>
+<span class="s2">    &lt;p&gt;Thanks for signing up. Before you drop into the battlefield, here are a few things you should know:&lt;/p&gt;</span>
+
+<span class="s2">    &lt;ul&gt;</span>
+<span class="s2">      &lt;li&gt;You will get to know all resources in BGMI.&lt;/li&gt;</span>
+<span class="s2">      &lt;li&gt;You will get to know the attributes of a Gun.&lt;/li&gt;</span>
+<span class="s2">      &lt;li&gt;You will be able to read all the maps available.&lt;/li&gt;</span>
+<span class="s2">      &lt;li&gt;You will get updates on different tournaments and a chance to participate.&lt;/li&gt;</span>
+<span class="s2">    &lt;/ul&gt;</span>
+
+<span class="s2">    &lt;button class=&quot;start-game-btn&quot; onclick=&quot;alert(&#39;Redirecting to game.html...&#39;)&quot;&gt;Start Game&lt;/button&gt;</span>
+<span class="s2">  &lt;/div&gt;</span>
+
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">bgmi_html</span><span class="p">))</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to BGMI</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .welcome-box {
+      max-width: 600px;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #333;
+    }
+    h1 {
+      color: #28a745;
+    }
+    ul {
+      text-align: left;
+      margin-top: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .start-game-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .start-game-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-box">
+    <h1>Welcome to BGMI!</h1>
+    <p>Thanks for signing up. Before you drop into the battlefield, here are a few things you should know:</p>
+
+    <ul>
+      <li>You will get to know all resources in BGMI.</li>
+      <li>You will get to know the attributes of a Gun.</li>
+      <li>You will be able to read all the maps available.</li>
+      <li>You will get updates on different tournaments and a chance to participate.</li>
+    </ul>
+
+    <button class="start-game-btn" onclick="alert('Redirecting to game.html...')">Start Game</button>
+  </div>
+
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;!DOCTYPE html&gt;</span>
+<span class="s2">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s2">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s2">    &lt;title&gt;Best Online Food Delivery Service in India | MyOnlineMeal.com&lt;/title&gt;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        body {</span>
+<span class="s2">            margin: 0;</span>
+<span class="s2">            font-family: Arial, sans-serif;</span>
+<span class="s2">            background-color: #f9f9f9;</span>
+<span class="s2">        }</span>
+
+<span class="s2">        #navbar {</span>
+<span class="s2">            display: flex;</span>
+<span class="s2">            align-items: center;</span>
+<span class="s2">            justify-content: space-between;</span>
+<span class="s2">            background-color: #ff4c4c;</span>
+<span class="s2">            padding: 10px 30px;</span>
+<span class="s2">            box-shadow: 0 2px 5px rgba(0,0,0,0.1);</span>
+<span class="s2">        }</span>
+
+<span class="s2">        #logo img {</span>
+<span class="s2">            height: 60px;</span>
+<span class="s2">        }</span>
+
+<span class="s2">        ul {</span>
+<span class="s2">            list-style-type: none;</span>
+<span class="s2">            display: flex;</span>
+<span class="s2">            margin: 0;</span>
+<span class="s2">            padding: 0;</span>
+<span class="s2">        }</span>
+
+<span class="s2">        li.item {</span>
+<span class="s2">            margin-left: 20px;</span>
+<span class="s2">        }</span>
+
+<span class="s2">        li.item a {</span>
+<span class="s2">            color: white;</span>
+<span class="s2">            text-decoration: none;</span>
+<span class="s2">            font-size: 18px;</span>
+<span class="s2">            transition: color 0.3s ease;</span>
+<span class="s2">        }</span>
+
+<span class="s2">        li.item a:hover {</span>
+<span class="s2">            color: #ffd700;</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">    &lt;nav id=&quot;navbar&quot;&gt;</span>
+<span class="s2">        &lt;div id=&quot;logo&quot;&gt;</span>
+<span class="s2">            &lt;img src=&quot;https://via.placeholder.com/150x100.png?text=Logo&quot; alt=&quot;MyOnlineMeal.com&quot;&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">        &lt;ul&gt;</span>
+<span class="s2">            &lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;</span>
+<span class="s2">            &lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;</span>
+<span class="s2">            &lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;</span>
+<span class="s2">            &lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;</span>
+<span class="s2">        &lt;/ul&gt;</span>
+<span class="s2">    &lt;/nav&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service in India | MyOnlineMeal.com</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ff4c4c;
+            padding: 10px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #logo img {
+            height: 60px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li.item {
+            margin-left: 20px;
+        }
+
+        li.item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        li.item a:hover {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://via.placeholder.com/150x100.png?text=Logo" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 

@@ -2,7 +2,7 @@
 title: Web Development Notes
 date: 2025-07-21
 author: Your Name
-cell_count: 75
+cell_count: 77
 score: 75
 ---
 
@@ -3066,6 +3066,300 @@ display(HTML(html_alert))
 <button onclick="alert('You clicked the button!')" style="padding:10px; background-color:orange; color:white; border:none;">
   Show Alert
 </button>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+bgmi_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to BGMI</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .welcome-box {
+      max-width: 600px;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #333;
+    }
+    h1 {
+      color: #28a745;
+    }
+    ul {
+      text-align: left;
+      margin-top: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .start-game-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .start-game-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-box">
+    <h1>Welcome to BGMI!</h1>
+    <p>Thanks for signing up. Before you drop into the battlefield, here are a few things you should know:</p>
+    
+    <ul>
+      <li>You will get to know all resources in BGMI.</li>
+      <li>You will get to know the attributes of a Gun.</li>
+      <li>You will be able to read all the maps available.</li>
+      <li>You will get updates on different tournaments and a chance to participate.</li>
+    </ul>
+
+    <button class="start-game-btn" onclick="alert('Redirecting to game.html...')">Start Game</button>
+  </div>
+
+</body>
+</html>
+"""
+
+display(HTML(bgmi_html))
+
+```
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to BGMI</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .welcome-box {
+      max-width: 600px;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #333;
+    }
+    h1 {
+      color: #28a745;
+    }
+    ul {
+      text-align: left;
+      margin-top: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .start-game-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .start-game-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-box">
+    <h1>Welcome to BGMI!</h1>
+    <p>Thanks for signing up. Before you drop into the battlefield, here are a few things you should know:</p>
+
+    <ul>
+      <li>You will get to know all resources in BGMI.</li>
+      <li>You will get to know the attributes of a Gun.</li>
+      <li>You will be able to read all the maps available.</li>
+      <li>You will get updates on different tournaments and a chance to participate.</li>
+    </ul>
+
+    <button class="start-game-btn" onclick="alert('Redirecting to game.html...')">Start Game</button>
+  </div>
+
+</body>
+</html>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+html_code = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service in India | MyOnlineMeal.com</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ff4c4c;
+            padding: 10px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #logo img {
+            height: 60px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li.item {
+            margin-left: 20px;
+        }
+
+        li.item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        li.item a:hover {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://via.placeholder.com/150x100.png?text=Logo" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+"""
+
+display(HTML(html_code))
+
+```
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service in India | MyOnlineMeal.com</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ff4c4c;
+            padding: 10px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #logo img {
+            height: 60px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li.item {
+            margin-left: 20px;
+        }
+
+        li.item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        li.item a:hover {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://via.placeholder.com/150x100.png?text=Logo" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 
 
 
