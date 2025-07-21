@@ -2,8 +2,8 @@
 title: Web Development Notes
 date: 2025-07-21
 author: Your Name
-cell_count: 45
-score: 45
+cell_count: 75
+score: 75
 ---
 
 <style>
@@ -1612,9 +1612,1468 @@ display(HTML(tags_html))
 
 
 ```python
+from IPython.display import display, HTML
+
+z_index_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box-1 {
+            z-index: 35;
+            position: relative;
+            top: 49px;
+            background-color: aqua;
+        }
+        #box-2 {
+            z-index: 34;
+            position: relative;
+            top: 14px;
+            background-color: red;
+        }
+        #box-3 {
+            background-color: green;
+        }
+        #box-4 {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+    <div class="box" id="box-4"></div>
+</body>
+</html>
+"""
+
+display(HTML(z_index_html))
+
+```
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box-1 {
+            z-index: 35;
+            position: relative;
+            top: 49px;
+            background-color: aqua;
+        }
+        #box-2 {
+            z-index: 34;
+            position: relative;
+            top: 14px;
+            background-color: red;
+        }
+        #box-3 {
+            background-color: green;
+        }
+        #box-4 {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+    <div class="box" id="box-4"></div>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+flexbox_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 75%;
+            border: 2px solid brown;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 8px;
+            padding: 3px;
+        }
+        #item-1 {
+            /* order, grow, shrink examples can go here */
+        }
+        #item-2 {
+            flex-basis: 320px;
+        }
+        #item-3 {
+            order: 40;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div>
+    </div>
+</body>
+</html>
+"""
+
+display(HTML(flexbox_html))
+
+```
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 75%;
+            border: 2px solid brown;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 8px;
+            padding: 3px;
+        }
+        #item-1 {
+            /* order, grow, shrink examples can go here */
+        }
+        #item-2 {
+            flex-basis: 320px;
+        }
+        #item-3 {
+            order: 40;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div>
+    </div>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+size_units_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size units</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            font-size: 10px;
+            border: 2px solid black;
+        }
+        h1 {
+            text-align: center;
+        }
+        #first {
+            /* font-size: 3em;
+               padding: 3em; */
+        }
+        #second {
+            /* font-size: 3rem;
+               padding: 3rem; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>
+"""
+
+display(HTML(size_units_html))
+
+```
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size units</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            font-size: 10px;
+            border: 2px solid black;
+        }
+        h1 {
+            text-align: center;
+        }
+        #first {
+            /* font-size: 3em;
+               padding: 3em; */
+        }
+        #second {
+            /* font-size: 3rem;
+               padding: 3rem; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+media_query_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box {
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        @media only screen and (max-width: 300px) {
+            #box-1 {
+                display: block;
+                background-color: aqua;
+            }
+        }
+        @media (min-width: 300px) and (max-width: 500px) {
+            #box-2 {
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+        @media (min-width: 500px) and (max-width: 800px) {
+            #box-3 {
+                display: block;
+                background-color: green;
+                color: black;
+            }
+        }
+        @media (min-width: 800px) {
+            #box-4 {
+                display: block;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">mai ek iPhone hoon</div>
+    <div class="box" id="box-2">mai ek Tablet hoon</div>
+    <div class="box" id="box-3">mai ek Desktop Computer hoon</div>
+    <div class="box" id="box-4">mai ek Widescreen Computer hoon</div>
+</body>
+</html>
+"""
+
+display(HTML(media_query_html))
+
+```
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box {
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        @media only screen and (max-width: 300px) {
+            #box-1 {
+                display: block;
+                background-color: aqua;
+            }
+        }
+        @media (min-width: 300px) and (max-width: 500px) {
+            #box-2 {
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+        @media (min-width: 500px) and (max-width: 800px) {
+            #box-3 {
+                display: block;
+                background-color: green;
+                color: black;
+            }
+        }
+        @media (min-width: 800px) {
+            #box-4 {
+                display: block;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">mai ek iPhone hoon</div>
+    <div class="box" id="box-2">mai ek Tablet hoon</div>
+    <div class="box" id="box-3">mai ek Desktop Computer hoon</div>
+    <div class="box" id="box-4">mai ek Widescreen Computer hoon</div>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+html_code = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* p right after div */
+        div + p {
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="items"><p>This is another paragraph inside</p></li>
+                <li>This will not be affected</li>
+                <p>This is a para inside ul</p>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>
+'''
+
+display(HTML(html_code))
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_18132\2777063503.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* p right after div */
+        div + p {
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="items"><p>This is another paragraph inside</p></li>
+                <li>This will not be affected</li>
+                <p>This is a para inside ul</p>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+html_code = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child pseudo selectors</title>
+    <style>
+        input {
+            display: block;
+        }
+        input[type='text'] {
+            padding: 34px;
+            border: 2px solid red;
+        }
+        a[target] {
+            font-size: 34px;
+            color: green;
+        }
+        a[target='_self'] {
+            font-size: 34px;
+            color: blue;
+        }
+        input[type=email] {
+            padding: 20px;
+            color: yellow;
+            border: 4px solid black;
+        }
+        li:nth-child(3) {
+            color: cyan;
+            font-size: 10px;
+        }
+        li:nth-child(2n+0) {
+            color: red;
+        }
+        li:nth-child(odd) {
+            color: green;
+        }
+        .container {
+            margin: auto;
+            width: 233px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your Email">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">item1</li>
+            <li class="item" id="item-2">item2</li>
+            <li class="item" id="item-3">item3</li>
+            <li class="item" id="item-4">item4</li>
+            <li class="item" id="item-5">item5</li>
+            <li class="item" id="item-6">item6</li>
+        </ul>
+    </div>
+</body>
+</html>
+'''
+
+display(HTML(html_code))
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_18132\3845158233.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child pseudo selectors</title>
+    <style>
+        input {
+            display: block;
+        }
+        input[type='text'] {
+            padding: 34px;
+            border: 2px solid red;
+        }
+        a[target] {
+            font-size: 34px;
+            color: green;
+        }
+        a[target='_self'] {
+            font-size: 34px;
+            color: blue;
+        }
+        input[type=email] {
+            padding: 20px;
+            color: yellow;
+            border: 4px solid black;
+        }
+        li:nth-child(3) {
+            color: cyan;
+            font-size: 10px;
+        }
+        li:nth-child(2n+0) {
+            color: red;
+        }
+        li:nth-child(odd) {
+            color: green;
+        }
+        .container {
+            margin: auto;
+            width: 233px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your Email">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">item1</li>
+            <li class="item" id="item-2">item2</li>
+            <li class="item" id="item-3">item3</li>
+            <li class="item" id="item-4">item4</li>
+            <li class="item" id="item-5">item5</li>
+            <li class="item" id="item-6">item6</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+html_code = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Image Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    header {
+      position: relative;
+      height: 100vh; /* full screen height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    h1 {
+      font-size: 3rem;
+      z-index: 1;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .item {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 40px;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }
+
+    hr {
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li class="item">Home</li>
+        <li class="item">About</li>
+        <li class="item">Services</li>
+        <li class="item">Contact Us</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Welcome to Coding World</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eligendi quas quo soluta,
+      fugit perspiciatis facere iusto voluptatum porro at voluptatibus eum vero voluptates sapiente
+      veritatis? Incidunt natus tempora deserunt?
+    </p>
+  </section>
+
+  <hr />
+</body>
+</html>
+'''
+
+display(HTML(html_code))
+
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_18132\4137644788.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Image Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    header {
+      position: relative;
+      height: 100vh; /* full screen height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    h1 {
+      font-size: 3rem;
+      z-index: 1;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .item {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 40px;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }
+
+    hr {
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li class="item">Home</li>
+        <li class="item">About</li>
+        <li class="item">Services</li>
+        <li class="item">Contact Us</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Welcome to Coding World</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eligendi quas quo soluta,
+      fugit perspiciatis facere iusto voluptatum porro at voluptatibus eum vero voluptates sapiente
+      veritatis? Incidunt natus tempora deserunt?
+    </p>
+  </section>
+
+  <hr />
+</body>
+</html>
+
+
+
+
+```python
+
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_18132\3492823427.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+```python
+from IPython.core.display import display, HTML
+
+html_code = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            padding: 23px 12px;
+            width: 300px;
+            background-color: burlywood;
+            box-shadow: inset 3px 5px green, 4px 6px red;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            text-shadow: -3px -4px 2px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="car-1">
+            <h2>This is C++ Course</h2>
+            <p>I have started C++. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque facilis perspiciatis nihil debitis minus, cumque illo laboriosam, reprehenderit repudiandae deserunt beatae incidunt amet minima accusantium, corrupti facere consectetur sint praesentium?</p>
+        </div>
+        <div class="card" id="car-2">
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vel nesciunt, earum culpa voluptatibus corrupti modi alias! Consequatur veritatis laborum vitae amet reiciendis, esse optio reprehenderit, aspernatur laboriosam, odit possimus?</p>
+        </div>
+        <div class="card" id="car-3">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum tempora quo illum assumenda, nam nihil repellat ea deleniti iure unde, perferendis est voluptatem, molestiae dolores eos fuga suscipit odit eum!</p>
+        </div>
+    </div>
+</body>
+</html>
+'''
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_18132\3104954739.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+```python
+html_list = """
+<h2>My Favorite Fruits</h2>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+"""
+display(HTML(html_list))
+
+```
+
+
+
+<h2>My Favorite Fruits</h2>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+
+
+
+
+```python
+html_marquee = """
+<marquee behavior="scroll" direction="left" style="color: purple; font-size: 20px;">
+  Welcome to the Coding World!
+</marquee>
+"""
+display(HTML(html_marquee))
+
+```
+
+
+
+<marquee behavior="scroll" direction="left" style="color: purple; font-size: 20px;">
+  Welcome to the Coding World!
+</marquee>
+
+
+
+
+```python
+html_ordered_list = """
+<h2>Steps to Learn HTML</h2>
+<ol>
+  <li>Start with basics</li>
+  <li>Learn tags</li>
+  <li>Practice daily</li>
+</ol>
+"""
+display(HTML(html_ordered_list))
+
+```
+
+
+
+<h2>Steps to Learn HTML</h2>
+<ol>
+  <li>Start with basics</li>
+  <li>Learn tags</li>
+  <li>Practice daily</li>
+</ol>
+
+
+
+
+```python
+html_quote = """
+<blockquote style="font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 10px;">
+  “The only way to do great work is to love what you do.” – Steve Jobs
+</blockquote>
+"""
+display(HTML(html_quote))
+
+```
+
+
+
+<blockquote style="font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 10px;">
+  “The only way to do great work is to love what you do.” – Steve Jobs
+</blockquote>
+
+
+
+
+```python
+html_progress = """
+<h3>Download Progress</h3>
+<progress value="70" max="100" style="width:300px;"></progress>
+"""
+display(HTML(html_progress))
+
+```
+
+
+
+<h3>Download Progress</h3>
+<progress value="70" max="100" style="width:300px;"></progress>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+html_lists = """
+<h3>Unordered List</h3>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Cherry</li>
+</ul>
+
+<h3>Ordered List</h3>
+<ol>
+  <li>Wake up</li>
+  <li>Brush Teeth</li>
+  <li>Exercise</li>
+</ol>
+"""
+display(HTML(html_lists))
+
+```
+
+
+
+<h3>Unordered List</h3>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Cherry</li>
+</ul>
+
+<h3>Ordered List</h3>
+<ol>
+  <li>Wake up</li>
+  <li>Brush Teeth</li>
+  <li>Exercise</li>
+</ol>
+
+
+
+
+```python
+html_table = """
+<h3>Student Marks</h3>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>Math</td>
+    <td>95</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>Science</td>
+    <td>89</td>
+  </tr>
+</table>
+"""
+display(HTML(html_table))
+
+```
+
+
+
+<h3>Student Marks</h3>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>Math</td>
+    <td>95</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>Science</td>
+    <td>89</td>
+  </tr>
+</table>
+
+
+
+
+```python
+html_marquee = """
+<marquee behavior="scroll" direction="left" style="color: blue; font-weight: bold;">
+  Welcome to HTML inside Python!
+</marquee>
+"""
+display(HTML(html_marquee))
+
+```
+
+
+
+<marquee behavior="scroll" direction="left" style="color: blue; font-weight: bold;">
+  Welcome to HTML inside Python!
+</marquee>
+
+
+
+
+```python
+html_styled_text = """
+<p style="color: darkgreen; font-size: 20px; font-family: Arial;">
+  This is a styled paragraph with inline CSS!
+</p>
+"""
+display(HTML(html_styled_text))
+
+```
+
+
+
+<p style="color: darkgreen; font-size: 20px; font-family: Arial;">
+  This is a styled paragraph with inline CSS!
+</p>
+
+
+
+
+```python
+html_audio = """
+<h3>Play an Audio Clip</h3>
+<audio controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+"""
+display(HTML(html_audio))
+
+```
+
+
+
+<h3>Play an Audio Clip</h3>
+<audio controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
+```python
+html_video = """
+<h3>Sample Video</h3>
+<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+"""
+display(HTML(html_video))
+
+```
+
+
+
+<h3>Sample Video</h3>
+<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+
+
+```python
+html_flex = """
+<div style="display:flex; gap:20px;">
+  <div style="flex:1; background-color:lightseagreen; padding:20px;">Column 1</div>
+  <div style="flex:1; background-color:lightpink; padding:20px;">Column 2</div>
+  <div style="flex:1; background-color:lightyellow; padding:20px;">Column 3</div>
+</div>
+"""
+display(HTML(html_flex))
+
+```
+
+
+
+<div style="display:flex; gap:20px;">
+  <div style="flex:1; background-color:lightseagreen; padding:20px;">Column 1</div>
+  <div style="flex:1; background-color:lightpink; padding:20px;">Column 2</div>
+  <div style="flex:1; background-color:lightyellow; padding:20px;">Column 3</div>
+</div>
+
+
+
+
+```python
+from IPython.display import display, HTML
+
+html_table = """
+<table border="1" cellpadding="10" style="border-collapse:collapse; text-align:center;">
+  <tr style="background-color:lightgray;">
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>24</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>28</td>
+    <td>Mumbai</td>
+  </tr>
+</table>
+"""
+display(HTML(html_table))
+
+```
+
+
+
+<table border="1" cellpadding="10" style="border-collapse:collapse; text-align:center;">
+  <tr style="background-color:lightgray;">
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>24</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>28</td>
+    <td>Mumbai</td>
+  </tr>
+</table>
+
+
+
+
+```python
+html_hover_card = """
+<div style="width:200px; padding:20px; border:1px solid #ccc; border-radius:8px; transition:0.3s; background:#fefefe;"
+     onmouseover="this.style.boxShadow='4px 4px 10px rgba(0,0,0,0.2)'" 
+     onmouseout="this.style.boxShadow='none'">
+  <h3>Hover Me</h3>
+  <p>I'm a hoverable card box!</p>
+</div>
+"""
+display(HTML(html_hover_card))
+
+```
+
+
+
+<div style="width:200px; padding:20px; border:1px solid #ccc; border-radius:8px; transition:0.3s; background:#fefefe;"
+     onmouseover="this.style.boxShadow='4px 4px 10px rgba(0,0,0,0.2)'" 
+     onmouseout="this.style.boxShadow='none'">
+  <h3>Hover Me</h3>
+  <p>I'm a hoverable card box!</p>
+</div>
+
+
+
+
+```python
+html_animation = """
+<div style="width:100px; height:100px; background:crimson; border-radius:50%; position:relative; animation:bounce 1s infinite alternate;"></div>
+<style>
+@keyframes bounce {
+  from { top: 0px; }
+  to { top: 100px; }
+}
+</style>
+"""
+display(HTML(html_animation))
+
+```
+
+
+
+<div style="width:100px; height:100px; background:crimson; border-radius:50%; position:relative; animation:bounce 1s infinite alternate;"></div>
+<style>
+@keyframes bounce {
+  from { top: 0px; }
+  to { top: 100px; }
+}
+</style>
+
+
+
+
+```python
+from IPython.display import HTML, display
+
+html_dropdown = """
+<label for="courses">Choose a course:</label>
+<select id="courses" name="courses">
+  <option value="html">HTML</option>
+  <option value="css">CSS</option>
+  <option value="js">JavaScript</option>
+  <option value="python">Python</option>
+</select>
+"""
+display(HTML(html_dropdown))
+
+```
+
+
+
+<label for="courses">Choose a course:</label>
+<select id="courses" name="courses">
+  <option value="html">HTML</option>
+  <option value="css">CSS</option>
+  <option value="js">JavaScript</option>
+  <option value="python">Python</option>
+</select>
+
+
+
+
+```python
+html_tooltip = """
+<p>Hover over the word 
+<span style="text-decoration:underline; cursor:help;" title="HyperText Markup Language">HTML</span> 
+to see the tooltip.</p>
+"""
+display(HTML(html_tooltip))
+
+```
+
+
+
+<p>Hover over the word 
+<span style="text-decoration:underline; cursor:help;" title="HyperText Markup Language">HTML</span> 
+to see the tooltip.</p>
+
+
+
+
+```python
+html_radio = """
+<form>
+  <p>Select your gender:</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+</form>
+"""
+display(HTML(html_radio))
+
+```
+
+
+
+<form>
+  <p>Select your gender:</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+</form>
+
+
+
+
+```python
+from IPython.display import HTML, display
+
+html_hover = """
+<p style="font-size:20px;">
+  <span style="color:blue; transition: 0.3s;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">
+    Hover over me!
+  </span>
+</p>
+"""
+display(HTML(html_hover))
+
+```
+
+
+
+<p style="font-size:20px;">
+  <span style="color:blue; transition: 0.3s;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">
+    Hover over me!
+  </span>
+</p>
+
+
+
+
+```python
+html_iframe = """
+<iframe src="https://www.example.com" width="300" height="200" style="border:1px solid black;">
+</iframe>
+"""
+display(HTML(html_iframe))
+
+```
+
+
+
+<iframe src="https://www.example.com" width="300" height="200" style="border:1px solid black;">
+</iframe>
+
+
+
+
+```python
+html_alert = """
+<button onclick="alert('You clicked the button!')" style="padding:10px; background-color:orange; color:white; border:none;">
+  Show Alert
+</button>
+"""
+display(HTML(html_alert))
+
+```
+
+
+
+<button onclick="alert('You clicked the button!')" style="padding:10px; background-color:orange; color:white; border:none;">
+  Show Alert
+</button>
+
+
+
+
+```python
 
 ```
 
 
 ---
-**Score: 45**
+**Score: 75**

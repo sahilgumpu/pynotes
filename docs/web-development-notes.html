@@ -1340,11 +1340,1263 @@ div[style*="gradient"] {
 <p><span style="background-color: #ffeb3b; padding: 5px 10px; border-radius: 20px; font-size: 14px;">HTML</span>
 <span style="background-color: #8bc34a; padding: 5px 10px; border-radius: 20px; font-size: 14px;">CSS</span>
 <span style="background-color: #03a9f4; padding: 5px 10px; border-radius: 20px; font-size: 14px;">JS</span></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">z_index_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;!DOCTYPE html&gt;</span>
+<span class="s2">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s2">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s2">    &lt;title&gt;Visibility and z-index&lt;/title&gt;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        .box {</span>
+<span class="s2">            width: 170px;</span>
+<span class="s2">            height: 170px;</span>
+<span class="s2">            border: 2px solid black;</span>
+<span class="s2">        }</span>
+<span class="s2">        #box-1 {</span>
+<span class="s2">            z-index: 35;</span>
+<span class="s2">            position: relative;</span>
+<span class="s2">            top: 49px;</span>
+<span class="s2">            background-color: aqua;</span>
+<span class="s2">        }</span>
+<span class="s2">        #box-2 {</span>
+<span class="s2">            z-index: 34;</span>
+<span class="s2">            position: relative;</span>
+<span class="s2">            top: 14px;</span>
+<span class="s2">            background-color: red;</span>
+<span class="s2">        }</span>
+<span class="s2">        #box-3 {</span>
+<span class="s2">            background-color: green;</span>
+<span class="s2">        }</span>
+<span class="s2">        #box-4 {</span>
+<span class="s2">            background-color: pink;</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-1&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-2&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-3&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-4&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">z_index_html</span><span class="p">))</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box-1 {
+            z-index: 35;
+            position: relative;
+            top: 49px;
+            background-color: aqua;
+        }
+        #box-2 {
+            z-index: 34;
+            position: relative;
+            top: 14px;
+            background-color: red;
+        }
+        #box-3 {
+            background-color: green;
+        }
+        #box-4 {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+    <div class="box" id="box-4"></div>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">flexbox_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;!DOCTYPE html&gt;</span>
+<span class="s2">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s2">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s2">    &lt;title&gt;Flexbox Tutorial&lt;/title&gt;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        .container {</span>
+<span class="s2">            height: 500px;</span>
+<span class="s2">            width: 75%;</span>
+<span class="s2">            border: 2px solid brown;</span>
+<span class="s2">            display: flex;</span>
+<span class="s2">            flex-direction: row;</span>
+<span class="s2">            align-items: stretch;</span>
+<span class="s2">        }</span>
+<span class="s2">        .item {</span>
+<span class="s2">            width: 100px;</span>
+<span class="s2">            height: 100px;</span>
+<span class="s2">            background-color: tomato;</span>
+<span class="s2">            border: 2px solid green;</span>
+<span class="s2">            margin: 8px;</span>
+<span class="s2">            padding: 3px;</span>
+<span class="s2">        }</span>
+<span class="s2">        #item-1 {</span>
+<span class="s2">            /* order, grow, shrink examples can go here */</span>
+<span class="s2">        }</span>
+<span class="s2">        #item-2 {</span>
+<span class="s2">            flex-basis: 320px;</span>
+<span class="s2">        }</span>
+<span class="s2">        #item-3 {</span>
+<span class="s2">            order: 40;</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">    &lt;h1&gt;This is Flexbox Tutorial&lt;/h1&gt;</span>
+<span class="s2">    &lt;div class=&quot;container&quot;&gt;</span>
+<span class="s2">        &lt;div class=&quot;item&quot; id=&quot;item-1&quot;&gt;First box&lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;item&quot; id=&quot;item-2&quot;&gt;Second box&lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;item&quot; id=&quot;item-3&quot;&gt;Third box&lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;item&quot; id=&quot;item-4&quot;&gt;Fourth box&lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;item&quot; id=&quot;item-5&quot;&gt;Fifth box&lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;item&quot; id=&quot;item-6&quot;&gt;Sixth box&lt;/div&gt;</span>
+<span class="s2">    &lt;/div&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">flexbox_html</span><span class="p">))</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 75%;
+            border: 2px solid brown;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 8px;
+            padding: 3px;
+        }
+        #item-1 {
+            /* order, grow, shrink examples can go here */
+        }
+        #item-2 {
+            flex-basis: 320px;
+        }
+        #item-3 {
+            order: 40;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div>
+    </div>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">size_units_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;!DOCTYPE html&gt;</span>
+<span class="s2">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s2">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s2">    &lt;title&gt;Size units&lt;/title&gt;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        html {</span>
+<span class="s2">            font-size: 25px;</span>
+<span class="s2">        }</span>
+<span class="s2">        .container {</span>
+<span class="s2">            height: 100vh;</span>
+<span class="s2">            width: 100vw;</span>
+<span class="s2">            font-size: 10px;</span>
+<span class="s2">            border: 2px solid black;</span>
+<span class="s2">        }</span>
+<span class="s2">        h1 {</span>
+<span class="s2">            text-align: center;</span>
+<span class="s2">        }</span>
+<span class="s2">        #first {</span>
+<span class="s2">            /* font-size: 3em;</span>
+<span class="s2">               padding: 3em; */</span>
+<span class="s2">        }</span>
+<span class="s2">        #second {</span>
+<span class="s2">            /* font-size: 3rem;</span>
+<span class="s2">               padding: 3rem; */</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">    &lt;div class=&quot;container&quot;&gt;</span>
+<span class="s2">        &lt;h1 id=&quot;first&quot;&gt;This is first heading&lt;/h1&gt;</span>
+<span class="s2">        &lt;h1 id=&quot;second&quot;&gt;This is second heading&lt;/h1&gt;</span>
+<span class="s2">        &lt;h1 id=&quot;third&quot;&gt;This is third heading&lt;/h1&gt;</span>
+<span class="s2">    &lt;/div&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">size_units_html</span><span class="p">))</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size units</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            font-size: 10px;
+            border: 2px solid black;
+        }
+        h1 {
+            text-align: center;
+        }
+        #first {
+            /* font-size: 3em;
+               padding: 3em; */
+        }
+        #second {
+            /* font-size: 3rem;
+               padding: 3rem; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">media_query_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;!DOCTYPE html&gt;</span>
+<span class="s2">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s2">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s2">    &lt;title&gt;Media Queries&lt;/title&gt;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        .box {</span>
+<span class="s2">            font-size: 72px;</span>
+<span class="s2">            text-align: center;</span>
+<span class="s2">            background-color: red;</span>
+<span class="s2">            color: white;</span>
+<span class="s2">            display: none;</span>
+<span class="s2">        }</span>
+<span class="s2">        @media only screen and (max-width: 300px) {</span>
+<span class="s2">            #box-1 {</span>
+<span class="s2">                display: block;</span>
+<span class="s2">                background-color: aqua;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">        @media (min-width: 300px) and (max-width: 500px) {</span>
+<span class="s2">            #box-2 {</span>
+<span class="s2">                display: block;</span>
+<span class="s2">                background-color: blueviolet;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">        @media (min-width: 500px) and (max-width: 800px) {</span>
+<span class="s2">            #box-3 {</span>
+<span class="s2">                display: block;</span>
+<span class="s2">                background-color: green;</span>
+<span class="s2">                color: black;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">        @media (min-width: 800px) {</span>
+<span class="s2">            #box-4 {</span>
+<span class="s2">                display: block;</span>
+<span class="s2">                background-color: yellow;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-1&quot;&gt;mai ek iPhone hoon&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-2&quot;&gt;mai ek Tablet hoon&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-3&quot;&gt;mai ek Desktop Computer hoon&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;box&quot; id=&quot;box-4&quot;&gt;mai ek Widescreen Computer hoon&lt;/div&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">media_query_html</span><span class="p">))</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box {
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        @media only screen and (max-width: 300px) {
+            #box-1 {
+                display: block;
+                background-color: aqua;
+            }
+        }
+        @media (min-width: 300px) and (max-width: 500px) {
+            #box-2 {
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+        @media (min-width: 500px) and (max-width: 800px) {
+            #box-3 {
+                display: block;
+                background-color: green;
+                color: black;
+            }
+        }
+        @media (min-width: 800px) {
+            #box-4 {
+                display: block;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">mai ek iPhone hoon</div>
+    <div class="box" id="box-2">mai ek Tablet hoon</div>
+    <div class="box" id="box-3">mai ek Desktop Computer hoon</div>
+    <div class="box" id="box-4">mai ek Widescreen Computer hoon</div>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;!DOCTYPE html&gt;</span>
+<span class="s1">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s1">&lt;head&gt;</span>
+<span class="s1">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s1">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s1">    &lt;title&gt;More on selectors&lt;/title&gt;</span>
+<span class="s1">    &lt;style&gt;</span>
+<span class="s1">        h1 {</span>
+<span class="s1">            background-color: red;</span>
+<span class="s1">            color: black;</span>
+<span class="s1">            font-weight: bold;</span>
+<span class="s1">            text-align: center;</span>
+<span class="s1">        }</span>
+<span class="s1">        /* p right after div */</span>
+<span class="s1">        div + p {</span>
+<span class="s1">            color: white;</span>
+<span class="s1">            background-color: blue;</span>
+<span class="s1">        }</span>
+<span class="s1">    &lt;/style&gt;</span>
+<span class="s1">&lt;/head&gt;</span>
+<span class="s1">&lt;body&gt;</span>
+<span class="s1">    &lt;h1&gt;This is more on selectors&lt;/h1&gt;</span>
+<span class="s1">    &lt;div class=&quot;container&quot;&gt;</span>
+<span class="s1">        &lt;div class=&quot;row&quot;&gt;</span>
+<span class="s1">            &lt;ul&gt;</span>
+<span class="s1">                &lt;li class=&quot;items&quot;&gt;&lt;p&gt;This is another paragraph inside&lt;/p&gt;&lt;/li&gt;</span>
+<span class="s1">                &lt;li&gt;This will not be affected&lt;/li&gt;</span>
+<span class="s1">                &lt;p&gt;This is a para inside ul&lt;/p&gt;</span>
+<span class="s1">            &lt;/ul&gt;</span>
+<span class="s1">            &lt;p&gt;This is a paragraph&lt;/p&gt;</span>
+<span class="s1">        &lt;/div&gt;</span>
+<span class="s1">        &lt;p&gt;This is another paragraph&lt;/p&gt;</span>
+<span class="s1">    &lt;/div&gt;</span>
+<span class="s1">    &lt;p&gt;This is outermost paragraph&lt;/p&gt;</span>
+<span class="s1">&lt;/body&gt;</span>
+<span class="s1">&lt;/html&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sahil</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18132</span>\<span class="mf">2777063503.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="ne">DeprecationWarning</span><span class="p">:</span> <span class="n">Importing</span> <span class="n">display</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="n">since</span> <span class="n">IPython</span> <span class="mf">7.14</span><span class="p">,</span> <span class="n">please</span> <span class="kn">import</span><span class="w"> </span><span class="nn">from</span> <span class="n">IPython</span><span class="o">.</span><span class="n">display</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* p right after div */
+        div + p {
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="items"><p>This is another paragraph inside</p></li>
+                <li>This will not be affected</li>
+                <p>This is a para inside ul</p>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;!DOCTYPE html&gt;</span>
+<span class="s1">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s1">&lt;head&gt;</span>
+<span class="s1">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s1">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s1">    &lt;title&gt;Attributes and nth child pseudo selectors&lt;/title&gt;</span>
+<span class="s1">    &lt;style&gt;</span>
+<span class="s1">        input {</span>
+<span class="s1">            display: block;</span>
+<span class="s1">        }</span>
+<span class="s1">        input[type=&#39;text&#39;] {</span>
+<span class="s1">            padding: 34px;</span>
+<span class="s1">            border: 2px solid red;</span>
+<span class="s1">        }</span>
+<span class="s1">        a[target] {</span>
+<span class="s1">            font-size: 34px;</span>
+<span class="s1">            color: green;</span>
+<span class="s1">        }</span>
+<span class="s1">        a[target=&#39;_self&#39;] {</span>
+<span class="s1">            font-size: 34px;</span>
+<span class="s1">            color: blue;</span>
+<span class="s1">        }</span>
+<span class="s1">        input[type=email] {</span>
+<span class="s1">            padding: 20px;</span>
+<span class="s1">            color: yellow;</span>
+<span class="s1">            border: 4px solid black;</span>
+<span class="s1">        }</span>
+<span class="s1">        li:nth-child(3) {</span>
+<span class="s1">            color: cyan;</span>
+<span class="s1">            font-size: 10px;</span>
+<span class="s1">        }</span>
+<span class="s1">        li:nth-child(2n+0) {</span>
+<span class="s1">            color: red;</span>
+<span class="s1">        }</span>
+<span class="s1">        li:nth-child(odd) {</span>
+<span class="s1">            color: green;</span>
+<span class="s1">        }</span>
+<span class="s1">        .container {</span>
+<span class="s1">            margin: auto;</span>
+<span class="s1">            width: 233px;</span>
+<span class="s1">        }</span>
+<span class="s1">    &lt;/style&gt;</span>
+<span class="s1">&lt;/head&gt;</span>
+<span class="s1">&lt;body&gt;</span>
+<span class="s1">    &lt;div class=&quot;container&quot;&gt;</span>
+<span class="s1">        &lt;h1&gt;&lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot;&gt;Go to google&lt;/a&gt;&lt;/h1&gt;</span>
+<span class="s1">        &lt;h1&gt;&lt;a href=&quot;http://facebook.com&quot; target=&quot;_self&quot;&gt;Go to facebook&lt;/a&gt;&lt;/h1&gt;</span>
+<span class="s1">        &lt;form action=&quot;&quot; class=&quot;form-control&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;email&quot; placeholder=&quot;Enter your Email&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;password&quot; placeholder=&quot;Enter your password&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;</span>
+<span class="s1">        &lt;/form&gt;</span>
+<span class="s1">        &lt;ul&gt;</span>
+<span class="s1">            &lt;li class=&quot;item&quot; id=&quot;item-1&quot;&gt;item1&lt;/li&gt;</span>
+<span class="s1">            &lt;li class=&quot;item&quot; id=&quot;item-2&quot;&gt;item2&lt;/li&gt;</span>
+<span class="s1">            &lt;li class=&quot;item&quot; id=&quot;item-3&quot;&gt;item3&lt;/li&gt;</span>
+<span class="s1">            &lt;li class=&quot;item&quot; id=&quot;item-4&quot;&gt;item4&lt;/li&gt;</span>
+<span class="s1">            &lt;li class=&quot;item&quot; id=&quot;item-5&quot;&gt;item5&lt;/li&gt;</span>
+<span class="s1">            &lt;li class=&quot;item&quot; id=&quot;item-6&quot;&gt;item6&lt;/li&gt;</span>
+<span class="s1">        &lt;/ul&gt;</span>
+<span class="s1">    &lt;/div&gt;</span>
+<span class="s1">&lt;/body&gt;</span>
+<span class="s1">&lt;/html&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sahil</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18132</span>\<span class="mf">3845158233.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="ne">DeprecationWarning</span><span class="p">:</span> <span class="n">Importing</span> <span class="n">display</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="n">since</span> <span class="n">IPython</span> <span class="mf">7.14</span><span class="p">,</span> <span class="n">please</span> <span class="kn">import</span><span class="w"> </span><span class="nn">from</span> <span class="n">IPython</span><span class="o">.</span><span class="n">display</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child pseudo selectors</title>
+    <style>
+        input {
+            display: block;
+        }
+        input[type='text'] {
+            padding: 34px;
+            border: 2px solid red;
+        }
+        a[target] {
+            font-size: 34px;
+            color: green;
+        }
+        a[target='_self'] {
+            font-size: 34px;
+            color: blue;
+        }
+        input[type=email] {
+            padding: 20px;
+            color: yellow;
+            border: 4px solid black;
+        }
+        li:nth-child(3) {
+            color: cyan;
+            font-size: 10px;
+        }
+        li:nth-child(2n+0) {
+            color: red;
+        }
+        li:nth-child(odd) {
+            color: green;
+        }
+        .container {
+            margin: auto;
+            width: 233px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your Email">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">item1</li>
+            <li class="item" id="item-2">item2</li>
+            <li class="item" id="item-3">item3</li>
+            <li class="item" id="item-4">item4</li>
+            <li class="item" id="item-5">item5</li>
+            <li class="item" id="item-6">item6</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;!DOCTYPE html&gt;</span>
+<span class="s1">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s1">&lt;head&gt;</span>
+<span class="s1">  &lt;meta charset=&quot;UTF-8&quot; /&gt;</span>
+<span class="s1">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span>
+<span class="s1">  &lt;title&gt;Background Image Test&lt;/title&gt;</span>
+<span class="s1">  &lt;style&gt;</span>
+<span class="s1">    * {</span>
+<span class="s1">      margin: 0;</span>
+<span class="s1">      padding: 0;</span>
+<span class="s1">      box-sizing: border-box;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    body {</span>
+<span class="s1">      font-family: Arial, sans-serif;</span>
+<span class="s1">      color: white;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    header {</span>
+<span class="s1">      position: relative;</span>
+<span class="s1">      height: 100vh; /* full screen height */</span>
+<span class="s1">      display: flex;</span>
+<span class="s1">      align-items: center;</span>
+<span class="s1">      justify-content: center;</span>
+<span class="s1">      text-align: center;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    header::before {</span>
+<span class="s1">      content: &quot;&quot;;</span>
+<span class="s1">      position: absolute;</span>
+<span class="s1">      top: 0;</span>
+<span class="s1">      left: 0;</span>
+<span class="s1">      height: 100%;</span>
+<span class="s1">      width: 100%;</span>
+<span class="s1">      background: url(&#39;https://source.unsplash.com/1600x900/?nature,water&#39;) no-repeat center center/cover;</span>
+<span class="s1">      z-index: -1;</span>
+<span class="s1">      opacity: 0.4;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    h1 {</span>
+<span class="s1">      font-size: 3rem;</span>
+<span class="s1">      z-index: 1;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    nav ul {</span>
+<span class="s1">      display: flex;</span>
+<span class="s1">      list-style: none;</span>
+<span class="s1">      gap: 20px;</span>
+<span class="s1">      z-index: 1;</span>
+<span class="s1">      position: relative;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    .item {</span>
+<span class="s1">      background: rgba(0, 0, 0, 0.3);</span>
+<span class="s1">      padding: 10px 15px;</span>
+<span class="s1">      border-radius: 5px;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    section {</span>
+<span class="s1">      padding: 40px;</span>
+<span class="s1">      background-color: #111;</span>
+<span class="s1">      color: #eee;</span>
+<span class="s1">      text-align: center;</span>
+<span class="s1">    }</span>
+
+<span class="s1">    hr {</span>
+<span class="s1">      border: 1px solid #444;</span>
+<span class="s1">    }</span>
+<span class="s1">  &lt;/style&gt;</span>
+<span class="s1">&lt;/head&gt;</span>
+<span class="s1">&lt;body&gt;</span>
+<span class="s1">  &lt;header&gt;</span>
+<span class="s1">    &lt;nav class=&quot;navbar&quot;&gt;</span>
+<span class="s1">      &lt;ul&gt;</span>
+<span class="s1">        &lt;li class=&quot;item&quot;&gt;Home&lt;/li&gt;</span>
+<span class="s1">        &lt;li class=&quot;item&quot;&gt;About&lt;/li&gt;</span>
+<span class="s1">        &lt;li class=&quot;item&quot;&gt;Services&lt;/li&gt;</span>
+<span class="s1">        &lt;li class=&quot;item&quot;&gt;Contact Us&lt;/li&gt;</span>
+<span class="s1">      &lt;/ul&gt;</span>
+<span class="s1">    &lt;/nav&gt;</span>
+<span class="s1">  &lt;/header&gt;</span>
+
+<span class="s1">  &lt;section&gt;</span>
+<span class="s1">    &lt;h1&gt;Welcome to Coding World&lt;/h1&gt;</span>
+<span class="s1">    &lt;p&gt;</span>
+<span class="s1">      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eligendi quas quo soluta,</span>
+<span class="s1">      fugit perspiciatis facere iusto voluptatum porro at voluptatibus eum vero voluptates sapiente</span>
+<span class="s1">      veritatis? Incidunt natus tempora deserunt?</span>
+<span class="s1">    &lt;/p&gt;</span>
+<span class="s1">  &lt;/section&gt;</span>
+
+<span class="s1">  &lt;hr /&gt;</span>
+<span class="s1">&lt;/body&gt;</span>
+<span class="s1">&lt;/html&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sahil</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18132</span>\<span class="mf">4137644788.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="ne">DeprecationWarning</span><span class="p">:</span> <span class="n">Importing</span> <span class="n">display</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="n">since</span> <span class="n">IPython</span> <span class="mf">7.14</span><span class="p">,</span> <span class="n">please</span> <span class="kn">import</span><span class="w"> </span><span class="nn">from</span> <span class="n">IPython</span><span class="o">.</span><span class="n">display</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+</code></pre></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Image Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    header {
+      position: relative;
+      height: 100vh; /* full screen height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    h1 {
+      font-size: 3rem;
+      z-index: 1;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .item {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 40px;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }
+
+    hr {
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li class="item">Home</li>
+        <li class="item">About</li>
+        <li class="item">Services</li>
+        <li class="item">Contact Us</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Welcome to Coding World</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eligendi quas quo soluta,
+      fugit perspiciatis facere iusto voluptatum porro at voluptatibus eum vero voluptates sapiente
+      veritatis? Incidunt natus tempora deserunt?
+    </p>
+  </section>
+
+  <hr />
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sahil</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18132</span>\<span class="mf">3492823427.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="ne">DeprecationWarning</span><span class="p">:</span> <span class="n">Importing</span> <span class="n">display</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="n">since</span> <span class="n">IPython</span> <span class="mf">7.14</span><span class="p">,</span> <span class="n">please</span> <span class="kn">import</span><span class="w"> </span><span class="nn">from</span> <span class="n">IPython</span><span class="o">.</span><span class="n">display</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;!DOCTYPE html&gt;</span>
+<span class="s1">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="s1">&lt;head&gt;</span>
+<span class="s1">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s1">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="s1">    &lt;title&gt;Box shadow and text Shadow&lt;/title&gt;</span>
+<span class="s1">    &lt;style&gt;</span>
+<span class="s1">        .container {</span>
+<span class="s1">            display: flex;</span>
+<span class="s1">            flex-wrap: wrap;</span>
+<span class="s1">            gap: 20px;</span>
+<span class="s1">            padding: 20px;</span>
+<span class="s1">        }</span>
+
+<span class="s1">        .card {</span>
+<span class="s1">            padding: 23px 12px;</span>
+<span class="s1">            width: 300px;</span>
+<span class="s1">            background-color: burlywood;</span>
+<span class="s1">            box-shadow: inset 3px 5px green, 4px 6px red;</span>
+<span class="s1">            border-radius: 10px;</span>
+<span class="s1">        }</span>
+
+<span class="s1">        .card h2 {</span>
+<span class="s1">            text-shadow: -3px -4px 2px white;</span>
+<span class="s1">        }</span>
+<span class="s1">    &lt;/style&gt;</span>
+<span class="s1">&lt;/head&gt;</span>
+<span class="s1">&lt;body&gt;</span>
+<span class="s1">    &lt;div class=&quot;container&quot;&gt;</span>
+<span class="s1">        &lt;div class=&quot;card&quot; id=&quot;car-1&quot;&gt;</span>
+<span class="s1">            &lt;h2&gt;This is C++ Course&lt;/h2&gt;</span>
+<span class="s1">            &lt;p&gt;I have started C++. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque facilis perspiciatis nihil debitis minus, cumque illo laboriosam, reprehenderit repudiandae deserunt beatae incidunt amet minima accusantium, corrupti facere consectetur sint praesentium?&lt;/p&gt;</span>
+<span class="s1">        &lt;/div&gt;</span>
+<span class="s1">        &lt;div class=&quot;card&quot; id=&quot;car-2&quot;&gt;</span>
+<span class="s1">            &lt;h2&gt;This is HTML Course&lt;/h2&gt;</span>
+<span class="s1">            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vel nesciunt, earum culpa voluptatibus corrupti modi alias! Consequatur veritatis laborum vitae amet reiciendis, esse optio reprehenderit, aspernatur laboriosam, odit possimus?&lt;/p&gt;</span>
+<span class="s1">        &lt;/div&gt;</span>
+<span class="s1">        &lt;div class=&quot;card&quot; id=&quot;car-3&quot;&gt;</span>
+<span class="s1">            &lt;h2&gt;Card 3&lt;/h2&gt;</span>
+<span class="s1">            &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum tempora quo illum assumenda, nam nihil repellat ea deleniti iure unde, perferendis est voluptatem, molestiae dolores eos fuga suscipit odit eum!&lt;/p&gt;</span>
+<span class="s1">        &lt;/div&gt;</span>
+<span class="s1">    &lt;/div&gt;</span>
+<span class="s1">&lt;/body&gt;</span>
+<span class="s1">&lt;/html&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sahil</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18132</span>\<span class="mf">3104954739.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="ne">DeprecationWarning</span><span class="p">:</span> <span class="n">Importing</span> <span class="n">display</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="n">since</span> <span class="n">IPython</span> <span class="mf">7.14</span><span class="p">,</span> <span class="n">please</span> <span class="kn">import</span><span class="w"> </span><span class="nn">from</span> <span class="n">IPython</span><span class="o">.</span><span class="n">display</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_list</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h2&gt;My Favorite Fruits&lt;/h2&gt;</span>
+<span class="s2">&lt;ul&gt;</span>
+<span class="s2">  &lt;li&gt;Apple&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Banana&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Mango&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_list</span><span class="p">))</span>
+</code></pre></div>
+
+<h2>My Favorite Fruits</h2>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_marquee</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;marquee behavior=&quot;scroll&quot; direction=&quot;left&quot; style=&quot;color: purple; font-size: 20px;&quot;&gt;</span>
+<span class="s2">  Welcome to the Coding World!</span>
+<span class="s2">&lt;/marquee&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_marquee</span><span class="p">))</span>
+</code></pre></div>
+
+<p><marquee behavior="scroll" direction="left" style="color: purple; font-size: 20px;">
+  Welcome to the Coding World!
+</marquee></p>
+<div class="highlight"><pre><span></span><code><span class="n">html_ordered_list</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h2&gt;Steps to Learn HTML&lt;/h2&gt;</span>
+<span class="s2">&lt;ol&gt;</span>
+<span class="s2">  &lt;li&gt;Start with basics&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Learn tags&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Practice daily&lt;/li&gt;</span>
+<span class="s2">&lt;/ol&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_ordered_list</span><span class="p">))</span>
+</code></pre></div>
+
+<h2>Steps to Learn HTML</h2>
+<ol>
+  <li>Start with basics</li>
+  <li>Learn tags</li>
+  <li>Practice daily</li>
+</ol>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_quote</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;blockquote style=&quot;font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 10px;&quot;&gt;</span>
+<span class="s2">  “The only way to do great work is to love what you do.” – Steve Jobs</span>
+<span class="s2">&lt;/blockquote&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_quote</span><span class="p">))</span>
+</code></pre></div>
+
+<blockquote style="font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 10px;">
+  “The only way to do great work is to love what you do.” – Steve Jobs
+</blockquote>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_progress</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h3&gt;Download Progress&lt;/h3&gt;</span>
+<span class="s2">&lt;progress value=&quot;70&quot; max=&quot;100&quot; style=&quot;width:300px;&quot;&gt;&lt;/progress&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_progress</span><span class="p">))</span>
+</code></pre></div>
+
+<h3>Download Progress</h3>
+<progress value="70" max="100" style="width:300px;"></progress>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_lists</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h3&gt;Unordered List&lt;/h3&gt;</span>
+<span class="s2">&lt;ul&gt;</span>
+<span class="s2">  &lt;li&gt;Apple&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Banana&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Cherry&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+
+<span class="s2">&lt;h3&gt;Ordered List&lt;/h3&gt;</span>
+<span class="s2">&lt;ol&gt;</span>
+<span class="s2">  &lt;li&gt;Wake up&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Brush Teeth&lt;/li&gt;</span>
+<span class="s2">  &lt;li&gt;Exercise&lt;/li&gt;</span>
+<span class="s2">&lt;/ol&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_lists</span><span class="p">))</span>
+</code></pre></div>
+
+<h3>Unordered List</h3>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Cherry</li>
+</ul>
+
+<h3>Ordered List</h3>
+<ol>
+  <li>Wake up</li>
+  <li>Brush Teeth</li>
+  <li>Exercise</li>
+</ol>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_table</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h3&gt;Student Marks&lt;/h3&gt;</span>
+<span class="s2">&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot;&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;th&gt;Name&lt;/th&gt;</span>
+<span class="s2">    &lt;th&gt;Subject&lt;/th&gt;</span>
+<span class="s2">    &lt;th&gt;Marks&lt;/th&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;td&gt;Alice&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;Math&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;95&lt;/td&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;td&gt;Bob&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;Science&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;89&lt;/td&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">&lt;/table&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_table</span><span class="p">))</span>
+</code></pre></div>
+
+<h3>Student Marks</h3>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>Math</td>
+    <td>95</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>Science</td>
+    <td>89</td>
+  </tr>
+</table>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_marquee</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;marquee behavior=&quot;scroll&quot; direction=&quot;left&quot; style=&quot;color: blue; font-weight: bold;&quot;&gt;</span>
+<span class="s2">  Welcome to HTML inside Python!</span>
+<span class="s2">&lt;/marquee&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_marquee</span><span class="p">))</span>
+</code></pre></div>
+
+<p><marquee behavior="scroll" direction="left" style="color: blue; font-weight: bold;">
+  Welcome to HTML inside Python!
+</marquee></p>
+<div class="highlight"><pre><span></span><code><span class="n">html_styled_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;p style=&quot;color: darkgreen; font-size: 20px; font-family: Arial;&quot;&gt;</span>
+<span class="s2">  This is a styled paragraph with inline CSS!</span>
+<span class="s2">&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_styled_text</span><span class="p">))</span>
+</code></pre></div>
+
+<p style="color: darkgreen; font-size: 20px; font-family: Arial;">
+  This is a styled paragraph with inline CSS!
+</p>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_audio</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h3&gt;Play an Audio Clip&lt;/h3&gt;</span>
+<span class="s2">&lt;audio controls&gt;</span>
+<span class="s2">  &lt;source src=&quot;https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span>
+<span class="s2">  Your browser does not support the audio element.</span>
+<span class="s2">&lt;/audio&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_audio</span><span class="p">))</span>
+</code></pre></div>
+
+<h3>Play an Audio Clip</h3>
+<p><audio controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio></p>
+<div class="highlight"><pre><span></span><code><span class="n">html_video</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h3&gt;Sample Video&lt;/h3&gt;</span>
+<span class="s2">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;</span>
+<span class="s2">  &lt;source src=&quot;https://www.w3schools.com/html/mov_bbb.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
+<span class="s2">  Your browser does not support the video tag.</span>
+<span class="s2">&lt;/video&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_video</span><span class="p">))</span>
+</code></pre></div>
+
+<h3>Sample Video</h3>
+<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_flex</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div style=&quot;display:flex; gap:20px;&quot;&gt;</span>
+<span class="s2">  &lt;div style=&quot;flex:1; background-color:lightseagreen; padding:20px;&quot;&gt;Column 1&lt;/div&gt;</span>
+<span class="s2">  &lt;div style=&quot;flex:1; background-color:lightpink; padding:20px;&quot;&gt;Column 2&lt;/div&gt;</span>
+<span class="s2">  &lt;div style=&quot;flex:1; background-color:lightyellow; padding:20px;&quot;&gt;Column 3&lt;/div&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_flex</span><span class="p">))</span>
+</code></pre></div>
+
+<div style="display:flex; gap:20px;">
+  <div style="flex:1; background-color:lightseagreen; padding:20px;">Column 1</div>
+  <div style="flex:1; background-color:lightpink; padding:20px;">Column 2</div>
+  <div style="flex:1; background-color:lightyellow; padding:20px;">Column 3</div>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_table</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;table border=&quot;1&quot; cellpadding=&quot;10&quot; style=&quot;border-collapse:collapse; text-align:center;&quot;&gt;</span>
+<span class="s2">  &lt;tr style=&quot;background-color:lightgray;&quot;&gt;</span>
+<span class="s2">    &lt;th&gt;Name&lt;/th&gt;</span>
+<span class="s2">    &lt;th&gt;Age&lt;/th&gt;</span>
+<span class="s2">    &lt;th&gt;City&lt;/th&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;td&gt;Alice&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;24&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;Delhi&lt;/td&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;td&gt;Bob&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;28&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;Mumbai&lt;/td&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">&lt;/table&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_table</span><span class="p">))</span>
+</code></pre></div>
+
+<table border="1" cellpadding="10" style="border-collapse:collapse; text-align:center;">
+  <tr style="background-color:lightgray;">
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>24</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>28</td>
+    <td>Mumbai</td>
+  </tr>
+</table>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_hover_card</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div style=&quot;width:200px; padding:20px; border:1px solid #ccc; border-radius:8px; transition:0.3s; background:#fefefe;&quot;</span>
+<span class="s2">     onmouseover=&quot;this.style.boxShadow=&#39;4px 4px 10px rgba(0,0,0,0.2)&#39;&quot; </span>
+<span class="s2">     onmouseout=&quot;this.style.boxShadow=&#39;none&#39;&quot;&gt;</span>
+<span class="s2">  &lt;h3&gt;Hover Me&lt;/h3&gt;</span>
+<span class="s2">  &lt;p&gt;I&#39;m a hoverable card box!&lt;/p&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_hover_card</span><span class="p">))</span>
+</code></pre></div>
+
+<div style="width:200px; padding:20px; border:1px solid #ccc; border-radius:8px; transition:0.3s; background:#fefefe;"
+     onmouseover="this.style.boxShadow='4px 4px 10px rgba(0,0,0,0.2)'" 
+     onmouseout="this.style.boxShadow='none'">
+  <h3>Hover Me</h3>
+  <p>I'm a hoverable card box!</p>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_animation</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div style=&quot;width:100px; height:100px; background:crimson; border-radius:50%; position:relative; animation:bounce 1s infinite alternate;&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">&lt;style&gt;</span>
+<span class="s2">@keyframes bounce {</span>
+<span class="s2">  from { top: 0px; }</span>
+<span class="s2">  to { top: 100px; }</span>
+<span class="s2">}</span>
+<span class="s2">&lt;/style&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_animation</span><span class="p">))</span>
+</code></pre></div>
+
+<div style="width:100px; height:100px; background:crimson; border-radius:50%; position:relative; animation:bounce 1s infinite alternate;"></div>
+<style>
+@keyframes bounce {
+  from { top: 0px; }
+  to { top: 100px; }
+}
+</style>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="n">html_dropdown</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;label for=&quot;courses&quot;&gt;Choose a course:&lt;/label&gt;</span>
+<span class="s2">&lt;select id=&quot;courses&quot; name=&quot;courses&quot;&gt;</span>
+<span class="s2">  &lt;option value=&quot;html&quot;&gt;HTML&lt;/option&gt;</span>
+<span class="s2">  &lt;option value=&quot;css&quot;&gt;CSS&lt;/option&gt;</span>
+<span class="s2">  &lt;option value=&quot;js&quot;&gt;JavaScript&lt;/option&gt;</span>
+<span class="s2">  &lt;option value=&quot;python&quot;&gt;Python&lt;/option&gt;</span>
+<span class="s2">&lt;/select&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_dropdown</span><span class="p">))</span>
+</code></pre></div>
+
+<p><label for="courses">Choose a course:</label>
+<select id="courses" name="courses">
+<br>
+<option value="html">HTML</option></p>
+<option value="css">CSS</option>
+<option value="js">JavaScript</option>
+<option value="python">Python</option>
+<p></select></p>
+<div class="highlight"><pre><span></span><code><span class="n">html_tooltip</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;p&gt;Hover over the word </span>
+<span class="s2">&lt;span style=&quot;text-decoration:underline; cursor:help;&quot; title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/span&gt; </span>
+<span class="s2">to see the tooltip.&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_tooltip</span><span class="p">))</span>
+</code></pre></div>
+
+<p>Hover over the word 
+<span style="text-decoration:underline; cursor:help;" title="HyperText Markup Language">HTML</span> 
+to see the tooltip.</p>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_radio</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;form&gt;</span>
+<span class="s2">  &lt;p&gt;Select your gender:&lt;/p&gt;</span>
+<span class="s2">  &lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;</span>
+<span class="s2">  &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;&lt;br&gt;</span>
+<span class="s2">  &lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;</span>
+<span class="s2">  &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br&gt;</span>
+<span class="s2">&lt;/form&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_radio</span><span class="p">))</span>
+</code></pre></div>
+
+<form>
+  <p>Select your gender:</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+</form>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="n">html_hover</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;p style=&quot;font-size:20px;&quot;&gt;</span>
+<span class="s2">  &lt;span style=&quot;color:blue; transition: 0.3s;&quot; onmouseover=&quot;this.style.color=&#39;red&#39;&quot; onmouseout=&quot;this.style.color=&#39;blue&#39;&quot;&gt;</span>
+<span class="s2">    Hover over me!</span>
+<span class="s2">  &lt;/span&gt;</span>
+<span class="s2">&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_hover</span><span class="p">))</span>
+</code></pre></div>
+
+<p style="font-size:20px;">
+  <span style="color:blue; transition: 0.3s;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">
+    Hover over me!
+  </span>
+</p>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_iframe</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;iframe src=&quot;https://www.example.com&quot; width=&quot;300&quot; height=&quot;200&quot; style=&quot;border:1px solid black;&quot;&gt;</span>
+<span class="s2">&lt;/iframe&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_iframe</span><span class="p">))</span>
+</code></pre></div>
+
+<iframe src="https://www.example.com" width="300" height="200" style="border:1px solid black;">
+</iframe>
+
+<div class="highlight"><pre><span></span><code><span class="n">html_alert</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;button onclick=&quot;alert(&#39;You clicked the button!&#39;)&quot; style=&quot;padding:10px; background-color:orange; color:white; border:none;&quot;&gt;</span>
+<span class="s2">  Show Alert</span>
+<span class="s2">&lt;/button&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_alert</span><span class="p">))</span>
+</code></pre></div>
+
+<p><button onclick="alert('You clicked the button!')" style="padding:10px; background-color:orange; color:white; border:none;">
+  Show Alert
+</button></p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 45</strong></p>
+<p><strong>Score: 75</strong></p>
 <p class="subheader">Category: <a href="https://sahilgumpu.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
