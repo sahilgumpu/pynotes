@@ -2,8 +2,8 @@
 title: Web Development Notes
 date: 2025-07-21
 author: Your Name
-cell_count: 18
-score: 15
+cell_count: 45
+score: 45
 ---
 
 <style>
@@ -610,8 +610,1005 @@ display(HTML(list_html))
 
 
 ```python
+from IPython.core.display import display, HTML
+
+css_tutorial_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <style>
+        p {
+            color: purple;
+            background-color: green;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a CSS Tutorial</h1>
+    <!-- <p style="color: red;background-color: yellow;">This tutorial will teach you everything you need to know about HTML/CSS</p> -->
+    <p>This tutorial will teach you everything you need to know about HTML/CSS</p>
+</body>
+</html>
+"""
+
+display(HTML(css_tutorial_html))
 
 ```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_2864\551637126.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <style>
+        p {
+            color: purple;
+            background-color: green;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a CSS Tutorial</h1>
+    <!-- <p style="color: red;background-color: yellow;">This tutorial will teach you everything you need to know about HTML/CSS</p> -->
+    <p>This tutorial will teach you everything you need to know about HTML/CSS</p>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+css_selectors_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p {
+            border: 2px solid rebeccapurple;
+            padding: 5px;
+        }
+        /* Id selector */
+        #firstpara {
+            color: red;
+        }
+        /* Class selector */
+        .bgBlue {
+            color: green;
+            background-color: black;
+        }
+        /* Multiple element selector */
+        footer, span {
+            background-color: pink;
+            padding: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Selectors</h3>
+    <p id="firstpara">This is a simple paragraph to demonstrate CSS selectors</p>
+    <p id="secondPara" class="bgBlue">This is another paragraph with class "bgBlue"</p>
+    <div>
+        <p>This is yet another paragraph inside a div</p>
+        <span>This is a span element</span>
+        <footer>This is a footer element</footer>
+    </div>
+</body>
+</html>
+"""
+
+display(HTML(css_selectors_html))
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_2864\3174135209.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p {
+            border: 2px solid rebeccapurple;
+            padding: 5px;
+        }
+        /* Id selector */
+        #firstpara {
+            color: red;
+        }
+        /* Class selector */
+        .bgBlue {
+            color: green;
+            background-color: black;
+        }
+        /* Multiple element selector */
+        footer, span {
+            background-color: pink;
+            padding: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Selectors</h3>
+    <p id="firstpara">This is a simple paragraph to demonstrate CSS selectors</p>
+    <p id="secondPara" class="bgBlue">This is another paragraph with class "bgBlue"</p>
+    <div>
+        <p>This is yet another paragraph inside a div</p>
+        <span>This is a span element</span>
+        <footer>This is a footer element</footer>
+    </div>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+developer_tools_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools</title>
+    <style>
+        p {
+            color: purple;
+            font-style: italic;
+            background-color: rosybrown;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h1 {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Developer Tools Tutorial</h1>
+    <p>This is a tutorial for Chrome Developer Tools</p>
+</body>
+</html>
+"""
+
+display(HTML(developer_tools_html))
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_2864\891464908.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools</title>
+    <style>
+        p {
+            color: purple;
+            font-style: italic;
+            background-color: rosybrown;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h1 {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Developer Tools Tutorial</h1>
+    <p>This is a tutorial for Chrome Developer Tools</p>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+css_fonts_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 23px; /* px = 1/96th of an inch */
+            line-height: 1.3em;
+        }
+        span {
+            font-weight: bold;
+            font-style: italic;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Fonts</h1>
+    <p>Let's play with <span>fonts</span>. It is very exciting!</p>
+</body>
+</html>
+"""
+
+display(HTML(css_fonts_html))
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_2864\648337141.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 23px; /* px = 1/96th of an inch */
+            line-height: 1.3em;
+        }
+        span {
+            font-weight: bold;
+            font-style: italic;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Fonts</h1>
+    <p>Let's play with <span>fonts</span>. It is very exciting!</p>
+</body>
+</html>
+
+
+
+
+```python
+from IPython.display import HTML, display
+
+color_demo_html = """
+<style>
+    #firstPara {
+        color: blueviolet;
+    }
+    #secondPara {
+        color: rgb(223, 130, 54); /* color by RGB value */
+    }
+    #thirdPara {
+        color: #ff88ff; /* color by HEX value */
+    }
+</style>
+
+<h2>This is my first box</h2>
+<p id="firstPara">This is a paragraph from the first box</p>
+
+<h2>This is my second box</h2>
+<p id="secondPara">This is a paragraph from the second box</p>
+
+<h2>This is my third box</h2>
+<p id="thirdPara">This is a paragraph from the third box</p>
+"""
+
+display(HTML(color_demo_html))
+
+```
+
+
+
+<style>
+    #firstPara {
+        color: blueviolet;
+    }
+    #secondPara {
+        color: rgb(223, 130, 54); /* color by RGB value */
+    }
+    #thirdPara {
+        color: #ff88ff; /* color by HEX value */
+    }
+</style>
+
+<h2>This is my first box</h2>
+<p id="firstPara">This is a paragraph from the first box</p>
+
+<h2>This is my second box</h2>
+<p id="secondPara">This is a paragraph from the second box</p>
+
+<h2>This is my third box</h2>
+<p id="thirdPara">This is a paragraph from the third box</p>
+
+
+
+
+```python
+from IPython.display import HTML
+
+HTML("<h2 style='color: teal;'>Welcome to My Page</h2>")
+
+```
+
+
+
+
+<h2 style='color: teal;'>Welcome to My Page</h2>
+
+
+
+
+```python
+HTML("<p style='font-size:16px; color: gray;'>This is a styled paragraph with inline CSS.</p>")
+
+```
+
+
+
+
+<p style='font-size:16px; color: gray;'>This is a styled paragraph with inline CSS.</p>
+
+
+
+
+```python
+HTML("<button style='padding:10px; background: orange; color: white; border: none; border-radius: 5px;'>Click Me</button>")
+
+```
+
+
+
+
+<button style='padding:10px; background: orange; color: white; border: none; border-radius: 5px;'>Click Me</button>
+
+
+
+
+```python
+HTML("<span style='color:red;'>Red</span> <span style='color:green;'>Green</span> <span style='color:blue;'>Blue</span>")
+
+```
+
+
+
+
+<span style='color:red;'>Red</span> <span style='color:green;'>Green</span> <span style='color:blue;'>Blue</span>
+
+
+
+
+```python
+from IPython.display import HTML
+
+HTML("""
+<div style="border:1px solid #ccc; border-radius:10px; width:200px; padding:15px; text-align:center; font-family:sans-serif;">
+    <img src="https://via.placeholder.com/80" style="border-radius:50%;" />
+    <h3 style="margin:10px 0;">John Doe</h3>
+    <p style="color:gray; font-size:14px;">Web Developer</p>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="border:1px solid #ccc; border-radius:10px; width:200px; padding:15px; text-align:center; font-family:sans-serif;">
+    <img src="https://via.placeholder.com/80" style="border-radius:50%;" />
+    <h3 style="margin:10px 0;">John Doe</h3>
+    <p style="color:gray; font-size:14px;">Web Developer</p>
+</div>
+
+
+
+
+
+```python
+HTML("""
+<label for="name">Name:</label><br>
+<input type="text" id="name" placeholder="Enter your name" style="padding:8px; width:200px; border:1px solid #ccc; border-radius:5px;" />
+""")
+
+```
+
+
+
+
+
+<label for="name">Name:</label><br>
+<input type="text" id="name" placeholder="Enter your name" style="padding:8px; width:200px; border:1px solid #ccc; border-radius:5px;" />
+
+
+
+
+
+```python
+HTML("""
+<div style="background-color:#d1e7dd; color:#0f5132; padding:10px; border-left:5px solid #0f5132; border-radius:4px;">
+    ✅ Successfully saved your data!
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="background-color:#d1e7dd; color:#0f5132; padding:10px; border-left:5px solid #0f5132; border-radius:4px;">
+    ✅ Successfully saved your data!
+</div>
+
+
+
+
+
+```python
+HTML("""
+<button style="padding:10px; border:none; border-radius:5px; background:#007bff; color:white;">📧 Email</button>
+<button style="padding:10px; border:none; border-radius:5px; background:#28a745; color:white;">📞 Call</button>
+""")
+
+```
+
+
+
+
+
+<button style="padding:10px; border:none; border-radius:5px; background:#007bff; color:white;">📧 Email</button>
+<button style="padding:10px; border:none; border-radius:5px; background:#28a745; color:white;">📞 Call</button>
+
+
+
+
+
+```python
+HTML("""
+<div style="font-size:24px; color:gold;">⭐ ⭐ ⭐ ⭐ ☆</div>
+""")
+
+```
+
+
+
+
+
+<div style="font-size:24px; color:gold;">⭐ ⭐ ⭐ ⭐ ☆</div>
+
+
+
+
+
+```python
+from IPython.display import HTML
+
+HTML("""
+<div style="width:280px; margin:auto; font-family:sans-serif; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); background:white;">
+  <h3 style="text-align:center; margin-bottom:20px;">Login</h3>
+  <form>
+    <input type="email" placeholder="Email" required style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" />
+    <input type="password" placeholder="Password" required style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" />
+    <button type="submit" style="width:100%; padding:10px; background:#28a745; color:white; border:none; border-radius:5px;">Login</button>
+  </form>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="width:280px; margin:auto; font-family:sans-serif; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); background:white;">
+  <h3 style="text-align:center; margin-bottom:20px;">Login</h3>
+  <form>
+    <input type="email" placeholder="Email" required style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" />
+    <input type="password" placeholder="Password" required style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" />
+    <button type="submit" style="width:100%; padding:10px; background:#28a745; color:white; border:none; border-radius:5px;">Login</button>
+  </form>
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="width:280px; margin:auto; font-family:sans-serif; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); background:white;">
+  <h3 style="text-align:center; margin-bottom:15px;">Forgot Password</h3>
+  <form>
+    <input type="email" placeholder="Enter your email" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px;" />
+    <button type="submit" style="width:100%; padding:10px; background:#ffc107; color:black; border:none; border-radius:5px;">Send Reset Link</button>
+  </form>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="width:280px; margin:auto; font-family:sans-serif; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); background:white;">
+  <h3 style="text-align:center; margin-bottom:15px;">Forgot Password</h3>
+  <form>
+    <input type="email" placeholder="Enter your email" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px;" />
+    <button type="submit" style="width:100%; padding:10px; background:#ffc107; color:black; border:none; border-radius:5px;">Send Reset Link</button>
+  </form>
+</div>
+
+
+
+
+
+```python
+from IPython.display import HTML
+
+HTML("""
+<div style="
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  font-family: Arial, sans-serif;
+">
+  <div style="
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  ">
+    <h3 style="text-align:center; color:#333;">Login</h3>
+    <input type="text" placeholder="Username" style="width:100%; padding:8px; margin:8px 0; border:1px solid #ccc; border-radius:4px;">
+    <input type="password" placeholder="Password" style="width:100%; padding:8px; margin:8px 0; border:1px solid #ccc; border-radius:4px;">
+    <button style="width:100%; padding:8px; background:#0072ff; color:white; border:none; border-radius:4px;">Login</button>
+  </div>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  font-family: Arial, sans-serif;
+">
+  <div style="
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  ">
+    <h3 style="text-align:center; color:#333;">Login</h3>
+    <input type="text" placeholder="Username" style="width:100%; padding:8px; margin:8px 0; border:1px solid #ccc; border-radius:4px;">
+    <input type="password" placeholder="Password" style="width:100%; padding:8px; margin:8px 0; border:1px solid #ccc; border-radius:4px;">
+    <button style="width:100%; padding:8px; background:#0072ff; color:white; border:none; border-radius:4px;">Login</button>
+  </div>
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="
+  max-width: 250px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: sans-serif;
+">
+  <img src="https://via.placeholder.com/100" style="border-radius: 50%;" />
+  <h3>John Doe</h3>
+  <p style="color: gray;">Web Developer</p>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="
+  max-width: 250px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: sans-serif;
+">
+  <img src="https://via.placeholder.com/100" style="border-radius: 50%;" />
+  <h3>John Doe</h3>
+  <p style="color: gray;">Web Developer</p>
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 24px;
+">
+  Welcome to My Gradient Page
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 24px;
+">
+  Welcome to My Gradient Page
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="text-align:center; margin-top: 100px;">
+  <div style="
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  "></div>
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <p style="font-family:sans-serif;">Loading...</p>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="text-align:center; margin-top: 100px;">
+  <div style="
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  "></div>
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <p style="font-family:sans-serif;">Loading...</p>
+</div>
+
+
+
+
+
+```python
+from IPython.display import HTML
+
+HTML("""
+<div style="background: #333; overflow: hidden; font-family: sans-serif;">
+  <a href="#" style="float: left; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+  <a href="#" style="float: left; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">About</a>
+  <a href="#" style="float: left; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Contact</a>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="background: #333; overflow: hidden; font-family: sans-serif;">
+  <a href="#" style="float: left; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+  <a href="#" style="float: left; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">About</a>
+  <a href="#" style="float: left; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Contact</a>
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
+  <img src="https://via.placeholder.com/100" style="border-radius: 8px;">
+  <img src="https://via.placeholder.com/100" style="border-radius: 8px;">
+  <img src="https://via.placeholder.com/100" style="border-radius: 8px;">
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
+  <img src="https://via.placeholder.com/100" style="border-radius: 8px;">
+  <img src="https://via.placeholder.com/100" style="border-radius: 8px;">
+  <img src="https://via.placeholder.com/100" style="border-radius: 8px;">
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="max-width: 300px; margin: 30px auto; font-family: sans-serif;">
+  <h3>Contact Us</h3>
+  <input type="text" placeholder="Your Name" style="width:100%; padding:8px; margin:6px 0;"><br>
+  <input type="email" placeholder="Your Email" style="width:100%; padding:8px; margin:6px 0;"><br>
+  <textarea placeholder="Your Message" style="width:100%; padding:8px; margin:6px 0;"></textarea><br>
+  <button style="padding:10px; background:#007bff; color:white; border:none; border-radius:5px;">Send</button>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="max-width: 300px; margin: 30px auto; font-family: sans-serif;">
+  <h3>Contact Us</h3>
+  <input type="text" placeholder="Your Name" style="width:100%; padding:8px; margin:6px 0;"><br>
+  <input type="email" placeholder="Your Email" style="width:100%; padding:8px; margin:6px 0;"><br>
+  <textarea placeholder="Your Message" style="width:100%; padding:8px; margin:6px 0;"></textarea><br>
+  <button style="padding:10px; background:#007bff; color:white; border:none; border-radius:5px;">Send</button>
+</div>
+
+
+
+
+
+```python
+HTML("""
+<div style="background: #222; color: #ccc; text-align: center; padding: 20px; font-family: sans-serif; margin-top: 40px;">
+  &copy; 2025 My Website | <a href="#" style="color:#00bfff; text-decoration: none;">Privacy Policy</a>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="background: #222; color: #ccc; text-align: center; padding: 20px; font-family: sans-serif; margin-top: 40px;">
+  &copy; 2025 My Website | <a href="#" style="color:#00bfff; text-decoration: none;">Privacy Policy</a>
+</div>
+
+
+
+
+
+```python
+from IPython.display import HTML
+
+HTML("""
+<div style="font-family: Arial, sans-serif;">
+  <button onclick="this.nextElementSibling.style.display = 
+    this.nextElementSibling.style.display === 'block' ? 'none' : 'block';"
+    style="background-color: #007bff; color: white; padding: 10px; border: none; width: 100%; text-align: left;">
+    What is BGMI?
+  </button>
+  <div style="display: none; padding: 10px; background-color: #f1f1f1;">
+    BGMI stands for Battlegrounds Mobile India. It’s a popular mobile game by Krafton.
+  </div>
+</div>
+""")
+
+```
+
+
+
+
+
+<div style="font-family: Arial, sans-serif;">
+  <button onclick="this.nextElementSibling.style.display = 
+    this.nextElementSibling.style.display === 'block' ? 'none' : 'block';"
+    style="background-color: #007bff; color: white; padding: 10px; border: none; width: 100%; text-align: left;">
+    What is BGMI?
+  </button>
+  <div style="display: none; padding: 10px; background-color: #f1f1f1;">
+    BGMI stands for Battlegrounds Mobile India. It’s a popular mobile game by Krafton.
+  </div>
+</div>
+
+
+
+
+
+```python
+
+```
+
+
+
+
+
+<div style="
+  width: 250px; 
+  height: 150px; 
+  border-radius: 10px; 
+  padding: 20px; 
+  color: white; 
+  font-family: sans-serif;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  animation: gradient 4s ease infinite;
+">
+  <h4>Gradient Box</h4>
+  <p>This box has a moving gradient!</p>
+</div>
+
+<style>
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+div[style*="gradient"] {
+  background-size: 200% 200%;
+}
+</style>
+
+
+
+
+
+```python
+from IPython.core.display import display, HTML
+
+html_card = """
+<div style="width: 200px; padding: 15px; background-color: #fff; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-radius: 10px;">
+  <h4>Title</h4>
+  <p>This is a simple card box.</p>
+</div>
+"""
+
+display(HTML(html_card))
+
+
+```
+
+    C:\Users\sahil\AppData\Local\Temp\ipykernel_2864\1854938944.py:1: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython.display
+      from IPython.core.display import display, HTML
+    
+
+
+
+<div style="width: 200px; padding: 15px; background-color: #fff; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-radius: 10px;">
+  <h4>Title</h4>
+  <p>This is a simple card box.</p>
+</div>
+
+
+
+
+```python
+tags_html = """
+<span style="background-color: #ffeb3b; padding: 5px 10px; border-radius: 20px; font-size: 14px;">HTML</span>
+<span style="background-color: #8bc34a; padding: 5px 10px; border-radius: 20px; font-size: 14px;">CSS</span>
+<span style="background-color: #03a9f4; padding: 5px 10px; border-radius: 20px; font-size: 14px;">JS</span>
+"""
+
+display(HTML(tags_html))
+
+```
+
+
+
+<span style="background-color: #ffeb3b; padding: 5px 10px; border-radius: 20px; font-size: 14px;">HTML</span>
+<span style="background-color: #8bc34a; padding: 5px 10px; border-radius: 20px; font-size: 14px;">CSS</span>
+<span style="background-color: #03a9f4; padding: 5px 10px; border-radius: 20px; font-size: 14px;">JS</span>
+
+
 
 
 ```python
@@ -620,4 +1617,4 @@ display(HTML(list_html))
 
 
 ---
-**Score: 15**
+**Score: 45**
